@@ -6,6 +6,19 @@
 <meta name="description" content="Bruno Faria — Gestor de TI, Gestor de Sistemas e profissional de Infraestrutura, Projetos e Operações. 19 anos de experiência.">
 <title>Bruno Faria — Gestão de TI, Infraestrutura, Sistemas & Projetos</title>
 
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%231C1712'/%3E%3Ctext x='32' y='43' font-family='Georgia,serif' font-size='30' fill='%23C79A63' text-anchor='middle'%3EBF%3C/text%3E%3C/svg%3E">
+
+<meta property="og:type" content="profile">
+<meta property="og:title" content="Bruno Faria — Gestão de TI, Infraestrutura, Sistemas & Projetos">
+<meta property="og:description" content="Gestor de TI com 19 anos de experiência em infraestrutura, sistemas, projetos e operações. Disponibilidade imediata, todo o Brasil.">
+<meta property="og:image" content="https://raw.githubusercontent.com/bfariadti/portfolio-bruno-faria-img/main/portfolio-bruno-faria-img.jpg">
+<meta property="og:url" content="https://bfariadti.github.io/portfolio-bruno/">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Bruno Faria — Gestão de TI, Infraestrutura, Sistemas & Projetos">
+<meta name="twitter:description" content="Gestor de TI com 19 anos de experiência em infraestrutura, sistemas, projetos e operações.">
+<meta name="twitter:image" content="https://raw.githubusercontent.com/bfariadti/portfolio-bruno-faria-img/main/portfolio-bruno-faria-img.jpg">
+
+
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@300;400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
@@ -19,6 +32,7 @@
   --espresso-2:#5E4530;
   --leather:#9C6B3E;
   --leather-soft:#C79A63;
+  --leather-text:#8A5F37;
   --line:#DCD0BC;
   --muted:#6B5D4F;
   --white:#FFFCF7;
@@ -34,13 +48,24 @@ body{
   -webkit-font-smoothing:antialiased;
 }
 ::selection{background:var(--leather-soft);color:var(--ink)}
+:focus-visible{outline:2px solid var(--leather);outline-offset:3px;border-radius:1px}
+.skip-link{
+  position:fixed;top:-60px;left:14px;z-index:300;
+  background:var(--ink);color:var(--paper);
+  padding:12px 18px;font-family:"IBM Plex Mono",monospace;font-size:.78rem;
+  transition:top .2s ease;
+}
+.skip-link:focus{top:14px}
+@media (prefers-reduced-motion: reduce){
+  *{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important;scroll-behavior:auto!important}
+}
 h1,h2,h3{font-family:Fraunces,serif;font-weight:500;letter-spacing:-.02em}
 a{color:inherit;text-decoration:none}
 .wrap{max-width:1160px;margin:auto;padding:0 40px}
 .eyebrow{
   font-family:"IBM Plex Mono",monospace;
   font-size:.72rem;letter-spacing:.16em;text-transform:uppercase;
-  color:var(--leather);font-weight:500
+  color:var(--leather-text);font-weight:500
 }
 
 /* NAV */
@@ -156,7 +181,8 @@ section{padding:110px 0}
   display:grid;grid-template-columns:.7fr 1.3fr;gap:65px;align-items:start
 }
 .about-photo img{
-  width:min(280px,100%);display:block;box-shadow:var(--shadow);
+  width:min(280px,100%);aspect-ratio:4/5;object-fit:cover;object-position:center top;
+  display:block;box-shadow:var(--shadow);
   filter:grayscale(.08) sepia(.05)
 }
 .frame-tag{
@@ -197,7 +223,7 @@ section{padding:110px 0}
 .route-item.current .route-node:after{background:var(--leather-soft)}
 .route-year{
   display:block;font-family:"IBM Plex Mono",monospace;font-size:.73rem;
-  color:var(--leather);letter-spacing:.05em;margin-bottom:7px
+  color:var(--leather-text);letter-spacing:.05em;margin-bottom:7px
 }
 .route-item h3{font-size:1.42rem;margin-bottom:2px}
 .route-role{font-size:.93rem;font-weight:600;color:var(--espresso);margin-bottom:13px}
@@ -275,7 +301,7 @@ section{padding:110px 0}
 #print-area{display:none}
 
 @media print{
-  @page{size:A4;margin:13mm 16mm}
+  @page{size:A4;margin:12mm 15mm}
   *{-webkit-print-color-adjust:exact!important;print-color-adjust:exact!important}
   html,body{background:#fff!important;color:#241D16}
   #nav,#hero,#sobre,#trajetoria,#competencias,#formacao,#contato,#print-fab{display:none!important}
@@ -283,77 +309,83 @@ section{padding:110px 0}
   #print-area{
     display:block!important;background:#fff;
     font-family:'Inter',Arial,sans-serif;color:#241D16;
-    font-size:8.6pt;line-height:1.48;
+    font-size:8.4pt;line-height:1.46;
     orphans:3;widows:3;
   }
 
   /* header */
   #print-area .cv-header{
     display:flex;align-items:flex-start;justify-content:space-between;gap:9mm;
-    padding-bottom:3mm;margin-bottom:4mm;
+    padding-bottom:2.6mm;margin-bottom:3.6mm;
     border-bottom:.75pt solid #4A3324;
   }
   #print-area .cv-header h1{
     font-family:'Fraunces',Georgia,serif;font-weight:500;
-    font-size:21pt;line-height:1;letter-spacing:-.01em;margin:0 0 1.8mm;color:#1C1712;
+    font-size:20pt;line-height:1;letter-spacing:-.01em;margin:0 0 1.6mm;color:#1C1712;
   }
   #print-area .cv-title{
     font-family:'IBM Plex Mono',monospace;
-    font-size:7.4pt;font-weight:500;letter-spacing:.05em;text-transform:uppercase;
-    color:#9C6B3E;margin-bottom:2.5mm;
+    font-size:7.2pt;font-weight:500;letter-spacing:.05em;text-transform:uppercase;
+    color:#9C6B3E;margin-bottom:2.2mm;
   }
-  #print-area .cv-contact{font-size:7.7pt;color:#5E4530;line-height:1.6}
+  #print-area .cv-contact{font-size:7.5pt;color:#5E4530;line-height:1.55}
   #print-area .cv-photo{
-    flex:none;width:24mm;height:29mm;object-fit:cover;object-position:center top;
+    flex:none;width:22mm;height:27mm;object-fit:cover;object-position:center top;
     border:.75pt solid #DCD0BC;
   }
 
   /* section titles */
   #print-area h2{
     font-family:'Fraunces',Georgia,serif;font-weight:500;
-    font-size:10.5pt;color:#4A3324;
-    border-bottom:.5pt solid #DCD0BC;padding-bottom:1.4mm;margin:4.6mm 0 2.4mm;
+    font-size:10pt;color:#4A3324;
+    border-bottom:.5pt solid #DCD0BC;padding-bottom:1.2mm;margin:4mm 0 2.1mm;
     break-after:avoid;break-inside:avoid;
   }
   #print-area h2:first-of-type{margin-top:0}
 
-  #print-area p{font-size:8.1pt;line-height:1.48;margin-bottom:2.2mm;color:#372B20}
+  #print-area p{font-size:7.9pt;line-height:1.45;margin-bottom:2mm;color:#372B20}
 
   /* one job = one unbreakable block */
-  #print-area .entry{margin-top:2.6mm;break-inside:avoid}
+  #print-area .entry{margin-top:2.3mm;break-inside:avoid}
   #print-area .entry:first-of-type{margin-top:0}
   #print-area .role{
     display:flex;align-items:baseline;justify-content:space-between;gap:6mm;
-    font-family:'Inter';font-size:8.9pt;font-weight:600;line-height:1.3;color:#1C1712;
+    font-family:'Inter';font-size:8.6pt;font-weight:600;line-height:1.28;color:#1C1712;
   }
   #print-area .role .role-name{flex:1;color:#1C1712}
   #print-area .role .role-date{
     flex:none;font-family:'IBM Plex Mono',monospace;font-weight:500;
-    font-size:7.3pt;letter-spacing:.02em;color:#9C6B3E;white-space:nowrap;
+    font-size:7.1pt;letter-spacing:.02em;color:#9C6B3E;white-space:nowrap;
   }
-  #print-area .sub{font-size:7.7pt;font-style:italic;color:#6B5D4F;margin:.6mm 0 1.3mm}
+  #print-area .sub{font-size:7.5pt;font-style:italic;color:#6B5D4F;margin:.5mm 0 1.2mm}
   #print-area ul{margin:0 0 0 3.6mm;padding:0}
   #print-area li{
-    font-size:7.7pt;line-height:1.4;margin-bottom:.9mm;color:#372B20;
+    font-size:7.5pt;line-height:1.38;margin-bottom:.8mm;color:#372B20;
     padding-left:1mm;
   }
 
   /* two-column blocks (formação / competências) */
   #print-area .cols{display:grid;grid-template-columns:1fr 1fr;gap:0 9mm;break-inside:avoid}
-  #print-area .skill{font-size:7.7pt;line-height:1.5;color:#372B20;break-inside:avoid}
+  #print-area .skill{font-size:7.5pt;line-height:1.48;color:#372B20;break-inside:avoid}
   #print-area .tail-block{break-inside:avoid}
 
   #print-area .footer-cv{
-    margin-top:4.5mm;padding-top:2mm;border-top:.5pt solid #DCD0BC;
+    margin-top:4mm;padding-top:1.8mm;border-top:.5pt solid #DCD0BC;
     font-family:'IBM Plex Mono',monospace;
-    font-size:6.8pt;letter-spacing:.03em;color:#9C6B3E;text-align:center;
+    font-size:6.6pt;letter-spacing:.03em;color:#9C6B3E;text-align:center;
   }
 }
 
 /* RESPONSIVO */
 @media(max-width:900px){
   .wrap{padding:0 24px}
-  .nav-links a{display:none}
+  .nav-links{
+    gap:16px;overflow-x:auto;-webkit-overflow-scrolling:touch;
+    max-width:62vw;scrollbar-width:none;
+  }
+  .nav-links::-webkit-scrollbar{display:none}
+  .nav-links a{flex:none;white-space:nowrap}
+  .nav-print-btn{flex:none;white-space:nowrap}
   .hero-layout{grid-template-columns:1fr;gap:35px}
   .hero-photo-wrap{justify-content:flex-start}
   .hero-photo-card{width:190px}
@@ -368,23 +400,14 @@ section{padding:110px 0}
   .section-head .eyebrow{display:block;margin-top:8px}
   .hero h1{font-size:3.5rem}
   #print-fab{right:15px;bottom:15px}
-  #print-hint{right:15px;bottom:66px;max-width:200px}
 }
 
-#print-hint{
-  position:fixed;right:32px;bottom:82px;z-index:199;
-  max-width:220px;background:#1C1712;color:#F7F2EA;
-  font-family:'IBM Plex Mono',monospace;font-size:.68rem;line-height:1.5;
-  padding:12px 14px;border-radius:2px;
-  box-shadow:0 15px 35px -12px rgba(28,23,18,.55);
-  opacity:.94;
-}
-#print-hint strong{color:#C79A63}
-@media print{#print-hint{display:none!important}}
 </style>
 </head>
 
 <body>
+
+<a href="#sobre" class="skip-link">Pular para o conteúdo</a>
 
 <nav id="nav">
   <div class="wrap">
@@ -448,6 +471,8 @@ section{padding:110px 0}
               class="hero-photo"
               src="https://raw.githubusercontent.com/bfariadti/portfolio-bruno-faria-img/main/portfolio-bruno-faria-img.jpg?v=20260826"
               alt="Bruno Faria — Gestor de TI"
+              fetchpriority="high"
+              decoding="async"
             >
             <div class="hero-photo-caption">GESTÃO DE TI · INFRAESTRUTURA · SISTEMAS</div>
           </div>
@@ -470,6 +495,8 @@ section{padding:110px 0}
         <img
           src="https://raw.githubusercontent.com/bfariadti/portfolio-bruno-faria-img/main/portfolio-bruno-faria-img.jpg?v=20260826"
           alt="Bruno Faria"
+          loading="lazy"
+          decoding="async"
         >
         <div class="frame-tag">BRUNO FARIA · CAMPOS DOS GOYTACAZES, RJ</div>
       </div>
@@ -793,14 +820,13 @@ section{padding:110px 0}
       </div>
     </div>
 
-    <div class="footer-bottom">
+    <footer class="footer-bottom">
       <span>BRUNO FARIA © 2026</span>
       <span>GESTÃO DE TI · INFRAESTRUTURA · SISTEMAS · PROJETOS</span>
-    </div>
+    </footer>
   </div>
 </section>
 
-<div id="print-hint">Dica: na janela de impressão, desmarque a opção <strong>"Cabeçalhos e rodapés"</strong> para um PDF mais limpo.</div>
 <button id="print-fab" onclick="printCV()">▣ &nbsp; IMPRIMIR CURRÍCULO</button>
 
 <!-- VERSÃO ESPECÍFICA PARA IMPRESSÃO / PDF -->
@@ -935,7 +961,19 @@ section{padding:110px 0}
 </div>
 
 <script>
-function printCV(){
+async function printCV(){
+  const fab=document.getElementById("print-fab");
+  const originalLabels=[...document.querySelectorAll('[onclick="printCV()"]')].map(b=>b.innerHTML);
+  try{
+    if(document.fonts && document.fonts.ready){
+      document.querySelectorAll('[onclick="printCV()"]').forEach(b=>b.style.opacity=".6");
+      await document.fonts.ready;
+    }
+  }catch(e){
+    /* segue mesmo se a checagem de fontes falhar */
+  }finally{
+    document.querySelectorAll('[onclick="printCV()"]').forEach(b=>b.style.opacity="1");
+  }
   window.print();
 }
 
