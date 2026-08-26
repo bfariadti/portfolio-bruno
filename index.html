@@ -275,44 +275,78 @@ section{padding:110px 0}
 #print-area{display:none}
 
 @media print{
-  @page{size:A4;margin:12mm 14mm}
+  @page{size:A4;margin:13mm 16mm}
   *{-webkit-print-color-adjust:exact!important;print-color-adjust:exact!important}
-  body{background:#fff!important;color:#1C1712}
+  html,body{background:#fff!important;color:#241D16}
   #nav,#hero,#sobre,#trajetoria,#competencias,#formacao,#contato,#print-fab{display:none!important}
-  #print-area{display:block!important;background:#fff;font-family:Arial,sans-serif;color:#222}
+
+  #print-area{
+    display:block!important;background:#fff;
+    font-family:'Inter',Arial,sans-serif;color:#241D16;
+    font-size:8.6pt;line-height:1.48;
+    orphans:3;widows:3;
+  }
+
+  /* header */
   #print-area .cv-header{
-    display:grid;grid-template-columns:1fr 32mm;gap:10mm;
-    border-bottom:2px solid #1C1712;padding-bottom:6mm;margin-bottom:5mm
+    display:flex;align-items:flex-start;justify-content:space-between;gap:9mm;
+    padding-bottom:3mm;margin-bottom:4mm;
+    border-bottom:.75pt solid #4A3324;
   }
   #print-area .cv-header h1{
-    font-family:Georgia,serif;font-size:25pt;line-height:1;margin:0 0 2mm
+    font-family:'Fraunces',Georgia,serif;font-weight:500;
+    font-size:21pt;line-height:1;letter-spacing:-.01em;margin:0 0 1.8mm;color:#1C1712;
   }
   #print-area .cv-title{
-    font-size:9.5pt;font-weight:bold;text-transform:uppercase;
-    color:#4A3324;margin-bottom:3mm
+    font-family:'IBM Plex Mono',monospace;
+    font-size:7.4pt;font-weight:500;letter-spacing:.05em;text-transform:uppercase;
+    color:#9C6B3E;margin-bottom:2.5mm;
   }
-  #print-area .cv-contact{font-size:8pt;color:#4A3324;line-height:1.5}
+  #print-area .cv-contact{font-size:7.7pt;color:#5E4530;line-height:1.6}
   #print-area .cv-photo{
-    width:32mm;height:40mm;object-fit:cover;object-position:center top;
-    border:1px solid #DCD0BC
+    flex:none;width:24mm;height:29mm;object-fit:cover;object-position:center top;
+    border:.75pt solid #DCD0BC;
   }
+
+  /* section titles */
   #print-area h2{
-    font-family:Georgia,serif;font-size:12pt;color:#4A3324;
-    border-bottom:1px solid #DCD0BC;padding-bottom:1.5mm;margin:5mm 0 2.5mm
+    font-family:'Fraunces',Georgia,serif;font-weight:500;
+    font-size:10.5pt;color:#4A3324;
+    border-bottom:.5pt solid #DCD0BC;padding-bottom:1.4mm;margin:4.6mm 0 2.4mm;
+    break-after:avoid;break-inside:avoid;
   }
-  #print-area p{font-size:8.2pt;line-height:1.42;margin-bottom:2mm}
+  #print-area h2:first-of-type{margin-top:0}
+
+  #print-area p{font-size:8.1pt;line-height:1.48;margin-bottom:2.2mm;color:#372B20}
+
+  /* one job = one unbreakable block */
+  #print-area .entry{margin-top:2.6mm;break-inside:avoid}
+  #print-area .entry:first-of-type{margin-top:0}
   #print-area .role{
-    font-size:8.7pt;font-weight:bold;margin-top:3mm;line-height:1.25
+    display:flex;align-items:baseline;justify-content:space-between;gap:6mm;
+    font-family:'Inter';font-size:8.9pt;font-weight:600;line-height:1.3;color:#1C1712;
   }
-  #print-area .role span{float:right;font-weight:normal}
-  #print-area .sub{font-size:7.8pt;font-style:italic;color:#6B5D4F;margin:1mm 0}
-  #print-area ul{margin:1mm 0 1mm 4mm;padding-left:3mm}
-  #print-area li{font-size:7.8pt;line-height:1.35;margin-bottom:1mm}
-  #print-area .cols{display:grid;grid-template-columns:1fr 1fr;gap:8mm}
-  #print-area .skill{font-size:7.8pt;line-height:1.45}
+  #print-area .role .role-name{flex:1;color:#1C1712}
+  #print-area .role .role-date{
+    flex:none;font-family:'IBM Plex Mono',monospace;font-weight:500;
+    font-size:7.3pt;letter-spacing:.02em;color:#9C6B3E;white-space:nowrap;
+  }
+  #print-area .sub{font-size:7.7pt;font-style:italic;color:#6B5D4F;margin:.6mm 0 1.3mm}
+  #print-area ul{margin:0 0 0 3.6mm;padding:0}
+  #print-area li{
+    font-size:7.7pt;line-height:1.4;margin-bottom:.9mm;color:#372B20;
+    padding-left:1mm;
+  }
+
+  /* two-column blocks (formação / competências) */
+  #print-area .cols{display:grid;grid-template-columns:1fr 1fr;gap:0 9mm;break-inside:avoid}
+  #print-area .skill{font-size:7.7pt;line-height:1.5;color:#372B20;break-inside:avoid}
+  #print-area .tail-block{break-inside:avoid}
+
   #print-area .footer-cv{
-    margin-top:4mm;padding-top:2mm;border-top:1px solid #DCD0BC;
-    font-size:7pt;color:#6B5D4F;text-align:center
+    margin-top:4.5mm;padding-top:2mm;border-top:.5pt solid #DCD0BC;
+    font-family:'IBM Plex Mono',monospace;
+    font-size:6.8pt;letter-spacing:.03em;color:#9C6B3E;text-align:center;
   }
 }
 
@@ -334,7 +368,19 @@ section{padding:110px 0}
   .section-head .eyebrow{display:block;margin-top:8px}
   .hero h1{font-size:3.5rem}
   #print-fab{right:15px;bottom:15px}
+  #print-hint{right:15px;bottom:66px;max-width:200px}
 }
+
+#print-hint{
+  position:fixed;right:32px;bottom:82px;z-index:199;
+  max-width:220px;background:#1C1712;color:#F7F2EA;
+  font-family:'IBM Plex Mono',monospace;font-size:.68rem;line-height:1.5;
+  padding:12px 14px;border-radius:2px;
+  box-shadow:0 15px 35px -12px rgba(28,23,18,.55);
+  opacity:.94;
+}
+#print-hint strong{color:#C79A63}
+@media print{#print-hint{display:none!important}}
 </style>
 </head>
 
@@ -754,6 +800,7 @@ section{padding:110px 0}
   </div>
 </section>
 
+<div id="print-hint">Dica: na janela de impressão, desmarque a opção <strong>"Cabeçalhos e rodapés"</strong> para um PDF mais limpo.</div>
 <button id="print-fab" onclick="printCV()">▣ &nbsp; IMPRIMIR CURRÍCULO</button>
 
 <!-- VERSÃO ESPECÍFICA PARA IMPRESSÃO / PDF -->
@@ -765,7 +812,8 @@ section{padding:110px 0}
       <div class="cv-title">Gestor de TI · Gestor de Sistemas · Infraestrutura · Projetos</div>
       <div class="cv-contact">
         (22) 99954-0556 · bfaria.dti@gmail.com · linkedin.com/in/brunofariapm<br>
-        Campos dos Goytacazes, RJ · Disponibilidade imediata · Todo o Brasil
+        Campos dos Goytacazes, RJ · Disponibilidade imediata · Todo o Brasil<br>
+        Portfólio online: <a href="https://bfariadti.github.io/portfolio-bruno/" style="color:inherit;text-decoration:underline">bfariadti.github.io/portfolio-bruno</a>
       </div>
     </div>
     <img
@@ -787,85 +835,101 @@ section{padding:110px 0}
 
   <h2>Experiência profissional</h2>
 
-  <div class="role">Unimed Campos — Analista de Sistemas N3 <span>2026 — atual</span></div>
-  <div class="sub">Sistema hospitalar MV Soul</div>
-  <ul>
-    <li>Suporte N3, análise de chamados, relatórios SQL e desenvolvimento/manutenção de formulários e recursos hospitalares.</li>
-  </ul>
-
-  <div class="role">Somec Diesel — Analista de Desenvolvimento de Sistemas <span>2026</span></div>
-  <ul>
-    <li>Desenvolvimento e suporte de sistemas; administração de servidores, backup, rede cabeada, Wi-Fi e Mikrotik.</li>
-  </ul>
-
-  <div class="role">Minsait — Gestor de Serviços / Gestor de Qualidade / Preposto Regional <span>2025</span></div>
-  <div class="sub">Field Service Petrobras · Bacia de Campos e Espírito Santo</div>
-  <ul>
-    <li>Gestão de mais de 20 profissionais de TI e Telecom e interface com supervisores e equipes de campo.</li>
-    <li>Responsabilidade por KPIs, SLAs, produtividade, backlog, escalas, clientes, fornecedores, contratos, custos, multas, relatórios e planejamento.</li>
-    <li>Gestão macro de demandas de cabeamento, pontos de rede, fibra óptica, fusão, equipamentos, racks e Wi-Fi.</li>
-  </ul>
-
-  <div class="role">Aliseo S.A. — Supervisor de TI <span>2023 — 2024</span></div>
-  <ul>
-    <li>Supervisão de equipe de TI e Telecom; infraestrutura, redes, fibra, racks, servidores, Mikrotik e Wi-Fi.</li>
-    <li>Coordenação de CFTV, controle de acesso, sensores, eletroímãs e HikCentral.</li>
-    <li>Responsabilidade por Segurança da Informação, LGPD, Active Directory, GPO, DNS e Microsoft 365.</li>
-    <li>Implantação e acompanhamento do ERP Sankhya.</li>
-  </ul>
-
-  <div class="role">BBM Logística — Consultor de Desenvolvimento de Integrações PJ <span>2022 — 2023</span></div>
-  <ul>
-    <li>Desenvolvimento de integrações TMS com SQL, PostgreSQL, Oracle/PLSQL, APIs e SAP FI/CO.</li>
-  </ul>
-
-  <div class="role">NovoVarejo — Product Manager <span>2021 — 2023</span></div>
-  <ul>
-    <li>Gestão funcional do produto, roadmap, backlog, onboarding e integração com DMS e marketplaces.</li>
-    <li>Produto capaz de gerar milhares de anúncios automaticamente a partir do estoque de peças de concessionárias.</li>
-  </ul>
-
-  <div class="role">Barcelos & Cia — Analista de Negócios e Sistemas <span>2007 — 2021</span></div>
-  <ul>
-    <li>Responsável pelo sistema de Frente de Loja de aproximadamente 15 supermercados e cerca de 60 PDVs, além de restaurantes e operações de atacado.</li>
-    <li>Projetos de Frente de Loja, WMS, comando de voz, SOMA/NovoVarejo, autoatendimento, comandas eletrônicas e integrações.</li>
-    <li>Responsável pelo WMS e participação direta na operação logística do centro de distribuição.</li>
-  </ul>
-
-  <h2>Formação</h2>
-  <div class="cols">
-    <div>
-      <div class="skill">Análise e Desenvolvimento de Sistemas</div>
-      <div class="skill">MBA em Gestão de Projetos</div>
-      <div class="skill">Pós-Graduação em Gestão de Logística</div>
-    </div>
-    <div>
-      <div class="skill">Técnico em Informática</div>
-      <div class="skill">Técnico em Segurança do Trabalho — registro ativo</div>
-      <div class="skill">ITIL 4 Foundation · HDI Support Center</div>
-    </div>
+  <div class="entry">
+    <div class="role"><span class="role-name">Unimed Campos — Analista de Sistemas N3</span><span class="role-date">2026 — atual</span></div>
+    <div class="sub">Sistema hospitalar MV Soul</div>
+    <ul>
+      <li>Suporte N3, análise de chamados, relatórios SQL e desenvolvimento/manutenção de formulários e recursos hospitalares.</li>
+    </ul>
   </div>
 
-  <h2>Competências principais</h2>
-  <div class="cols">
-    <div>
-      <div class="skill">Gestão de TI e equipes · KPIs · SLAs · Backlog</div>
-      <div class="skill">Infraestrutura · Redes · Telecom · Fibra óptica</div>
-      <div class="skill">Windows Server · Active Directory · GPO · DNS</div>
-      <div class="skill">Mikrotik · Wi-Fi · CFTV · HikCentral</div>
-      <div class="skill">Gestão de Projetos · Implantação · Go-live</div>
-    </div>
-    <div>
-      <div class="skill">SQL · T-SQL · Oracle/PL-SQL · PostgreSQL</div>
-      <div class="skill">APIs · JSON/XML · Integrações</div>
-      <div class="skill">ERP · WMS · TMS · PDV · MV Soul</div>
-      <div class="skill">SAP FI/CO · Gestão de fornecedores</div>
-      <div class="skill">Liderança · Visão sistêmica · Resolução de problemas</div>
-    </div>
+  <div class="entry">
+    <div class="role"><span class="role-name">Somec Diesel — Analista de Desenvolvimento de Sistemas</span><span class="role-date">2026</span></div>
+    <ul>
+      <li>Desenvolvimento e suporte de sistemas; administração de servidores, backup, rede cabeada, Wi-Fi e Mikrotik.</li>
+    </ul>
   </div>
 
-  <div class="footer-cv">
-    Bruno Faria · Disponibilidade imediata · Presencial, híbrido ou remoto · Todo o Brasil
+  <div class="entry">
+    <div class="role"><span class="role-name">Minsait — Gestor de Serviços / Gestor de Qualidade / Preposto Regional</span><span class="role-date">2025</span></div>
+    <div class="sub">Field Service Petrobras · Bacia de Campos e Espírito Santo</div>
+    <ul>
+      <li>Gestão de mais de 20 profissionais de TI e Telecom e interface com supervisores e equipes de campo.</li>
+      <li>Responsabilidade por KPIs, SLAs, produtividade, backlog, escalas, clientes, fornecedores, contratos, custos, multas, relatórios e planejamento.</li>
+      <li>Gestão macro de demandas de cabeamento, pontos de rede, fibra óptica, fusão, equipamentos, racks e Wi-Fi.</li>
+    </ul>
+  </div>
+
+  <div class="entry">
+    <div class="role"><span class="role-name">Aliseo S.A. — Supervisor de TI</span><span class="role-date">2023 — 2024</span></div>
+    <ul>
+      <li>Supervisão de equipe de TI e Telecom; infraestrutura, redes, fibra, racks, servidores, Mikrotik e Wi-Fi.</li>
+      <li>Coordenação de CFTV, controle de acesso, sensores, eletroímãs e HikCentral.</li>
+      <li>Responsabilidade por Segurança da Informação, LGPD, Active Directory, GPO, DNS e Microsoft 365.</li>
+      <li>Implantação e acompanhamento do ERP Sankhya.</li>
+    </ul>
+  </div>
+
+  <div class="entry">
+    <div class="role"><span class="role-name">BBM Logística — Consultor de Desenvolvimento de Integrações PJ</span><span class="role-date">2022 — 2023</span></div>
+    <ul>
+      <li>Desenvolvimento de integrações TMS com SQL, PostgreSQL, Oracle/PLSQL, APIs e SAP FI/CO.</li>
+    </ul>
+  </div>
+
+  <div class="entry">
+    <div class="role"><span class="role-name">NovoVarejo — Product Manager</span><span class="role-date">2021 — 2023</span></div>
+    <ul>
+      <li>Gestão funcional do produto, roadmap, backlog, onboarding e integração com DMS e marketplaces.</li>
+      <li>Produto capaz de gerar milhares de anúncios automaticamente a partir do estoque de peças de concessionárias.</li>
+    </ul>
+  </div>
+
+  <div class="entry">
+    <div class="role"><span class="role-name">Barcelos &amp; Cia — Analista de Negócios e Sistemas</span><span class="role-date">2007 — 2021</span></div>
+    <ul>
+      <li>Responsável pelo sistema de Frente de Loja de aproximadamente 15 supermercados e cerca de 60 PDVs, além de restaurantes e operações de atacado.</li>
+      <li>Projetos de Frente de Loja, WMS, comando de voz, SOMA/NovoVarejo, autoatendimento, comandas eletrônicas e integrações.</li>
+      <li>Responsável pelo WMS e participação direta na operação logística do centro de distribuição.</li>
+    </ul>
+  </div>
+
+  <div class="tail-block">
+    <h2>Formação</h2>
+    <div class="cols">
+      <div>
+        <div class="skill">Análise e Desenvolvimento de Sistemas</div>
+        <div class="skill">MBA em Gestão de Projetos</div>
+        <div class="skill">Pós-Graduação em Gestão de Logística</div>
+      </div>
+      <div>
+        <div class="skill">Técnico em Informática</div>
+        <div class="skill">Técnico em Segurança do Trabalho — registro ativo</div>
+        <div class="skill">ITIL 4 Foundation · HDI Support Center</div>
+      </div>
+    </div>
+
+    <h2>Competências principais</h2>
+    <div class="cols">
+      <div>
+        <div class="skill">Gestão de TI e equipes · KPIs · SLAs · Backlog</div>
+        <div class="skill">Infraestrutura · Redes · Telecom · Fibra óptica</div>
+        <div class="skill">Windows Server · Active Directory · GPO · DNS</div>
+        <div class="skill">Mikrotik · Wi-Fi · CFTV · HikCentral</div>
+        <div class="skill">Gestão de Projetos · Implantação · Go-live</div>
+      </div>
+      <div>
+        <div class="skill">SQL · T-SQL · Oracle/PL-SQL · PostgreSQL</div>
+        <div class="skill">APIs · JSON/XML · Integrações</div>
+        <div class="skill">ERP · WMS · TMS · PDV · MV Soul</div>
+        <div class="skill">SAP FI/CO · Gestão de fornecedores</div>
+        <div class="skill">Liderança · Visão sistêmica · Resolução de problemas</div>
+      </div>
+    </div>
+
+    <div class="footer-cv">
+      Bruno Faria · Disponibilidade imediata · Presencial, híbrido ou remoto · Todo o Brasil
+    </div>
   </div>
 
 </div>
