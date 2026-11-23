@@ -3,535 +3,913 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Bruno Faria — Portfólio de especialidades em TI, Infraestrutura, Sistemas, Segurança da Informação e Operações. 19 anos de experiência.">
-<title>Bruno Faria — Especialista em TI, Infraestrutura, Sistemas & Operações</title>
-
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%231C1712'/%3E%3Ctext x='32' y='43' font-family='Georgia,serif' font-size='30' fill='%23C79A63' text-anchor='middle'%3EBF%3C/text%3E%3C/svg%3E">
-
-<meta property="og:type" content="profile">
-<meta property="og:title" content="Bruno Faria — Especialista em TI, Infraestrutura, Sistemas & Operações">
-<meta property="og:description" content="Portfólio profissional com 19 anos de experiência em gestão de TI, infraestrutura, segurança da informação, sistemas e operações.">
-<meta property="og:image" content="https://raw.githubusercontent.com/bfariadti/portfolio-bruno-faria-img/main/portfolio-bruno-faria-img.jpg">
-<meta property="og:url" content="https://bfariadti.github.io/portfolio-bruno/">
-<meta name="twitter:card" content="summary_large_image">
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Expires" content="0">
+<script>
+/* Cache-busting: força uma nova requisição do HTML ao abrir o endereço sem parâmetros.
+   O parâmetro temporário é removido do histórico após o carregamento. */
+(function () {
+  const params = new URLSearchParams(window.location.search);
+  if (params.has('_fresh')) {
+    params.delete('_fresh');
+    const cleanUrl = window.location.pathname +
+      (params.toString() ? '?' + params.toString() : '') +
+      window.location.hash;
+    window.history.replaceState(null, '', cleanUrl);
+    return;
+  }
+  const freshUrl = new URL(window.location.href);
+  freshUrl.searchParams.set('_fresh', Date.now().toString());
+  window.location.replace(freshUrl.href);
+})();
+</script>
+<meta name="description" content="Bruno Faria — Gestor de TI, Gestor de Sistemas e profissional de Infraestrutura, Projetos e Operações. 19 anos de experiência.">
+<title>Bruno Faria — Gestão de TI, Infraestrutura, Sistemas & Projetos</title>
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@300;400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
-
-<!-- Google Analytics 4 -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-6WH3P0V993"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-6WH3P0V993');
-</script>
-
-<!-- Microsoft Clarity -->
-<script type="text/javascript">
-  (function(c,l,a,r,i,t,y){
-    c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
-    t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
-    y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
-  })(window, document, "clarity", "script", "yaylmlxq6p");
-</script>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@300;400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
 
 <style>
 :root{
-  --paper:#F7F2EA;--paper-deep:#EFE7D8;--ink:#1C1712;--espresso:#4A3324;
-  --espresso-2:#5E4530;--leather:#9C6B3E;--leather-soft:#C79A63;--leather-text:#8A5F37;
-  --sage:#3D4F3A;--sage-soft:#5A7A55;--line:#DCD0BC;--muted:#6B5D4F;--white:#FFFCF7;
-  --shadow:0 20px 50px -25px rgba(28,23,18,.45);--shadow-soft:0 8px 30px -12px rgba(28,23,18,.2);
+  --paper:#F7F2EA;
+  --paper-deep:#EFE7D8;
+  --ink:#1C1712;
+  --espresso:#4A3324;
+  --espresso-2:#5E4530;
+  --leather:#9C6B3E;
+  --leather-soft:#C79A63;
+  --line:#DCD0BC;
+  --muted:#6B5D4F;
+  --white:#FFFCF7;
+  --shadow:0 20px 50px -25px rgba(28,23,18,.45);
 }
 *{margin:0;padding:0;box-sizing:border-box}
 html{scroll-behavior:smooth}
-body{background:var(--paper);color:var(--ink);font-family:Inter,sans-serif;line-height:1.65;-webkit-font-smoothing:antialiased}
+body{
+  background:var(--paper);
+  color:var(--ink);
+  font-family:Inter,sans-serif;
+  line-height:1.6;
+  -webkit-font-smoothing:antialiased;
+}
 ::selection{background:var(--leather-soft);color:var(--ink)}
-:focus-visible{outline:2px solid var(--leather);outline-offset:3px;border-radius:1px}
-.skip-link{position:fixed;top:-60px;left:14px;z-index:300;background:var(--ink);color:var(--paper);padding:12px 18px;font-family:"IBM Plex Mono",monospace;font-size:.78rem;transition:top .2s ease}
-.skip-link:focus{top:14px}
-@media (prefers-reduced-motion: reduce){*{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important;scroll-behavior:auto!important}}
-h1,h2,h3,h4{font-family:Fraunces,serif;font-weight:500;letter-spacing:-.02em}
+h1,h2,h3{font-family:Fraunces,serif;font-weight:500;letter-spacing:-.02em}
 a{color:inherit;text-decoration:none}
-.wrap{max-width:1180px;margin:auto;padding:0 40px}
-.eyebrow{font-family:"IBM Plex Mono",monospace;font-size:.72rem;letter-spacing:.16em;text-transform:uppercase;color:var(--leather-text);font-weight:500}
-#nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:20px 0;transition:.3s}
-#nav.scrolled{background:rgba(247,242,234,.94);backdrop-filter:blur(12px);box-shadow:0 1px 0 var(--line);padding:14px 0}
+.wrap{max-width:1160px;margin:auto;padding:0 40px}
+.eyebrow{
+  font-family:"IBM Plex Mono",monospace;
+  font-size:.72rem;letter-spacing:.16em;text-transform:uppercase;
+  color:var(--leather);font-weight:500
+}
+
+/* NAV */
+#nav{
+  position:fixed;top:0;left:0;right:0;z-index:100;
+  padding:20px 0;
+  transition:.3s;
+}
+#nav.scrolled{
+  background:rgba(247,242,234,.92);
+  backdrop-filter:blur(12px);
+  box-shadow:0 1px 0 var(--line);
+  padding:14px 0;
+}
 #nav .wrap{display:flex;align-items:center;justify-content:space-between}
-.nav-mark{font-family:"IBM Plex Mono",monospace;font-size:.82rem;letter-spacing:.06em;display:flex;align-items:center;gap:9px}
+.nav-mark{
+  font-family:"IBM Plex Mono",monospace;font-size:.82rem;
+  letter-spacing:.06em;display:flex;align-items:center;gap:9px
+}
 .nav-mark .dot{width:7px;height:7px;border-radius:50%;background:var(--leather)}
 .nav-links{display:flex;align-items:center;gap:28px}
 .nav-links a{font-size:.85rem;color:var(--espresso)}
 .nav-links a:hover{color:var(--leather)}
-.nav-cta{border:1px solid var(--espresso);background:var(--espresso);color:var(--white);padding:9px 16px;font-family:"IBM Plex Mono",monospace;font-size:.72rem;cursor:pointer;transition:.25s}
-.nav-cta:hover{background:var(--ink);border-color:var(--ink)}
-#hero{min-height:100vh;background:var(--ink);color:var(--white);position:relative;display:flex;align-items:center;overflow:hidden}
-.hero-bg{position:absolute;inset:0;background:radial-gradient(circle at 20% 80%,rgba(61,79,58,.18),transparent 40%),radial-gradient(circle at 80% 20%,rgba(156,107,62,.15),transparent 35%),linear-gradient(135deg,#1C1712 0%,#2A1F16 50%,#17120e 100%)}
-.hero-grid{position:absolute;inset:0;opacity:.12;background-image:linear-gradient(rgba(247,242,234,.07) 1px,transparent 1px),linear-gradient(90deg,rgba(247,242,234,.07) 1px,transparent 1px);background-size:72px 72px}
-.hero-content{position:relative;z-index:2;width:100%;padding-top:100px;padding-bottom:80px}
-.hero-layout{display:grid;grid-template-columns:1.3fr .7fr;gap:70px;align-items:center}
-.hero-eyebrow{color:var(--leather-soft);display:flex;align-items:center;gap:12px;margin-bottom:22px}
+.nav-print-btn{
+  border:1px solid var(--espresso);background:transparent;color:var(--espresso);
+  padding:9px 15px;font-family:"IBM Plex Mono",monospace;font-size:.72rem;
+  cursor:pointer;transition:.25s
+}
+.nav-print-btn:hover{background:var(--espresso);color:var(--white)}
+
+/* HERO */
+#hero{
+  min-height:100vh;background:var(--ink);color:var(--white);
+  position:relative;display:flex;align-items:center;overflow:hidden;
+}
+.hero-bg{
+  position:absolute;inset:0;
+  background:
+    radial-gradient(circle at 78% 30%,rgba(156,107,62,.22),transparent 34%),
+    linear-gradient(135deg,#211a14 0%,#34241a 55%,#17120e 100%);
+}
+.hero-grid{
+  position:absolute;inset:0;opacity:.18;
+  background-image:
+    linear-gradient(rgba(247,242,234,.08) 1px,transparent 1px),
+    linear-gradient(90deg,rgba(247,242,234,.08) 1px,transparent 1px);
+  background-size:64px 64px
+}
+.hero-content{
+  position:relative;z-index:2;width:100%;padding-top:90px;padding-bottom:70px
+}
+.hero-layout{
+  display:grid;grid-template-columns:1.35fr .65fr;gap:70px;align-items:center
+}
+.hero-eyebrow{
+  color:var(--leather-soft);display:flex;align-items:center;gap:12px;margin-bottom:20px
+}
 .hero-eyebrow .rule{width:42px;height:1px;background:var(--leather-soft)}
-.hero h1{font-size:clamp(2.8rem,6vw,5.2rem);line-height:.98;color:var(--white);margin-bottom:22px}
+.hero h1{font-size:clamp(3.4rem,7vw,6.5rem);line-height:.92;color:var(--white);margin-bottom:24px}
 .hero h1 em{color:var(--leather-soft);font-style:italic}
-.hero-manifesto{max-width:640px;font-size:1.18rem;font-weight:300;color:rgba(255,252,247,.82);margin-bottom:14px}
-.hero-manifesto strong{color:var(--white);font-weight:500}
-.hero-quote{max-width:600px;font-size:1rem;font-weight:400;color:var(--leather-soft);font-family:Fraunces,serif;font-style:italic;margin-bottom:32px;padding-left:18px;border-left:2px solid rgba(199,154,99,.4)}
-.hero-ctas{display:flex;flex-wrap:wrap;gap:14px;margin-bottom:36px}
-.hero-ctas .btn-primary{background:var(--leather-soft);color:var(--ink);padding:14px 26px;font-family:"IBM Plex Mono",monospace;font-size:.78rem;font-weight:500;border:none;cursor:pointer;transition:.25s}
-.hero-ctas .btn-primary:hover{background:var(--white)}
-.hero-ctas .btn-secondary{background:transparent;color:var(--white);padding:14px 26px;font-family:"IBM Plex Mono",monospace;font-size:.78rem;font-weight:500;border:1px solid rgba(255,252,247,.3);cursor:pointer;transition:.25s}
-.hero-ctas .btn-secondary:hover{border-color:var(--leather-soft);color:var(--leather-soft)}
-.hero-meta{display:flex;flex-wrap:wrap;gap:22px;font-family:"IBM Plex Mono",monospace;font-size:.72rem;color:rgba(255,252,247,.5)}
+.hero-title{
+  font-size:clamp(1.05rem,2vw,1.45rem);font-weight:600;
+  letter-spacing:.01em;margin-bottom:16px;color:var(--white)
+}
+.hero-tagline{
+  max-width:680px;font-size:1.08rem;font-weight:300;
+  color:rgba(255,252,247,.78);margin-bottom:28px
+}
+.hero-highlights{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:28px}
+.hero-highlights span{
+  border:1px solid rgba(199,154,99,.35);
+  padding:7px 11px;font-family:"IBM Plex Mono",monospace;
+  font-size:.68rem;color:rgba(255,252,247,.82)
+}
+.hero-meta{
+  display:flex;flex-wrap:wrap;gap:22px;
+  font-family:"IBM Plex Mono",monospace;font-size:.72rem;
+  color:rgba(255,252,247,.58)
+}
+
+/* FOTO NO TOPO */
 .hero-photo-wrap{display:flex;justify-content:flex-end}
-.hero-photo-card{width:min(240px,100%);padding:12px;background:rgba(255,252,247,.06);border:1px solid rgba(255,252,247,.15);box-shadow:0 30px 70px -30px rgba(0,0,0,.75)}
-.hero-photo{display:block;width:100%;aspect-ratio:4/5;object-fit:cover;object-position:center top;filter:saturate(.85) contrast(1.05)}
-.hero-photo-caption{padding:12px 6px 4px;font-family:"IBM Plex Mono",monospace;font-size:.64rem;letter-spacing:.08em;color:rgba(255,252,247,.55);text-align:center}
+.hero-photo-card{
+  width:min(235px,100%);
+  padding:12px;
+  background:rgba(255,252,247,.07);
+  border:1px solid rgba(255,252,247,.18);
+  box-shadow:0 30px 70px -30px rgba(0,0,0,.75);
+}
+.hero-photo{
+  display:block;width:100%;aspect-ratio:4/5;object-fit:cover;
+  object-position:center top;
+  filter:saturate(.88) contrast(1.03)
+}
+.hero-photo-caption{
+  padding:12px 6px 4px;
+  font-family:"IBM Plex Mono",monospace;
+  font-size:.66rem;letter-spacing:.08em;
+  color:rgba(255,252,247,.65);text-align:center
+}
+
+/* SEÇÕES */
 section{padding:110px 0}
-.section-head{display:flex;align-items:baseline;justify-content:space-between;gap:24px;margin-bottom:58px;border-bottom:1px solid var(--line);padding-bottom:20px}
+.section-head{
+  display:flex;align-items:baseline;justify-content:space-between;
+  gap:24px;margin-bottom:58px;border-bottom:1px solid var(--line);padding-bottom:20px
+}
 .section-head h2{font-size:clamp(2rem,3.5vw,2.8rem)}
 .section-head .eyebrow{white-space:nowrap}
-#problema{background:var(--paper-deep)}
-.problema-grid{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center}
-.problema-text h3{font-size:clamp(1.6rem,3vw,2.2rem);margin-bottom:18px;color:var(--ink);line-height:1.15}
-.problema-text p{font-size:1.05rem;color:var(--espresso-2);margin-bottom:16px;max-width:52ch}
-.problema-text strong{color:var(--ink)}
-.problema-cta{margin-top:28px;padding:20px 24px;background:var(--white);border-left:3px solid var(--sage);box-shadow:var(--shadow)}
-.problema-cta p{margin:0;font-size:.95rem;color:var(--espresso-2)}
-.problema-cta strong{display:block;margin-bottom:6px;color:var(--sage);font-size:1.05rem}
-.problema-sinais{display:grid;grid-template-columns:1fr 1fr;gap:16px}
-.sinais-card{background:var(--white);border:1px solid var(--line);padding:22px 20px;transition:transform .25s ease,box-shadow .25s ease}
-.sinais-card:hover{transform:translateY(-3px);box-shadow:var(--shadow-soft)}
-.sinais-card .num{font-family:"IBM Plex Mono",monospace;font-size:.7rem;color:var(--leather-text);margin-bottom:8px}
-.sinais-card h4{font-size:1.05rem;margin-bottom:6px;color:var(--ink)}
-.sinais-card p{font-size:.88rem;color:var(--muted);line-height:1.5}
-.segmentos{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:45px}
-.seg-card{background:var(--white);border:1px solid var(--line);padding:28px 24px;transition:all .25s ease;position:relative;overflow:hidden}
-.seg-card::before{content:"";position:absolute;top:0;left:0;right:0;height:3px;background:var(--leather-soft);transform:scaleX(0);transition:transform .3s ease}
-.seg-card:hover::before{transform:scaleX(1)}
-.seg-card:hover{transform:translateY(-4px);box-shadow:var(--shadow-soft);border-color:var(--leather-soft)}
-.seg-card h4{font-size:1.08rem;margin-bottom:10px;color:var(--ink)}
-.seg-card p{font-size:.86rem;color:var(--muted);line-height:1.55}
-.seg-card .seg-tag{display:inline-block;margin-top:14px;padding:4px 10px;background:rgba(61,79,58,.08);color:var(--sage);font-family:"IBM Plex Mono",monospace;font-size:.64rem;letter-spacing:.04em}
-#servicos{background:var(--ink);color:var(--paper)}
-#servicos .section-head{border-bottom-color:rgba(247,242,234,.15)}
-#servicos .section-head h2{color:var(--white)}
-#servicos .eyebrow{color:var(--leather-soft)}
-.servicos-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:28px}
-.servico-card{background:rgba(255,252,247,.04);border:1px solid rgba(255,252,247,.12);padding:36px 32px;transition:all .3s ease}
-.servico-card:hover{background:rgba(255,252,247,.07);border-color:rgba(199,154,99,.4);transform:translateY(-3px)}
-.servico-card .serv-icon{width:44px;height:44px;margin-bottom:18px;color:var(--leather-soft)}
-.servico-card .serv-icon svg{width:100%;height:100%;stroke:currentColor;fill:none;stroke-width:1.5}
-.servico-card h3{font-size:1.35rem;color:var(--white);margin-bottom:10px}
-.servico-card p{font-size:.92rem;color:rgba(255,252,247,.65);margin-bottom:18px;max-width:45ch}
-.servico-card .serv-tags{display:flex;flex-wrap:wrap;gap:8px}
-.servico-card .serv-tags span{font-size:.78rem;padding:6px 12px;background:rgba(255,252,247,.08);color:rgba(255,252,247,.8);font-family:"IBM Plex Mono",monospace}
-.metodo-steps{display:grid;grid-template-columns:repeat(4,1fr);gap:24px;margin-top:50px;position:relative}
-.metodo-steps::before{content:"";position:absolute;top:28px;left:12%;right:12%;height:1px;background:repeating-linear-gradient(90deg,var(--leather) 0 6px,transparent 6px 12px);opacity:.4}
-.step{text-align:center;position:relative;z-index:1}
-.step-num{width:56px;height:56px;border-radius:50%;background:var(--paper-deep);border:2px solid var(--leather);display:flex;align-items:center;justify-content:center;margin:0 auto 18px;font-family:"IBM Plex Mono",monospace;font-size:.9rem;color:var(--espresso);font-weight:500}
-.step h4{font-size:1.1rem;margin-bottom:8px;color:var(--ink)}
-.step p{font-size:.88rem;color:var(--muted);line-height:1.5}
+
+/* SOBRE */
+#sobre .about-grid{
+  display:grid;grid-template-columns:.7fr 1.3fr;gap:65px;align-items:start
+}
+.about-photo img{
+  width:min(280px,100%);display:block;box-shadow:var(--shadow);
+  filter:grayscale(.08) sepia(.05)
+}
+.frame-tag{
+  display:inline-block;margin-top:-1px;background:var(--espresso);
+  color:var(--white);padding:10px 15px;
+  font-family:"IBM Plex Mono",monospace;font-size:.65rem;letter-spacing:.07em
+}
+.about-copy p{font-size:1rem;color:var(--espresso-2);max-width:70ch;margin-bottom:18px}
+.about-copy strong{color:var(--ink)}
+.about-facts{
+  display:grid;grid-template-columns:1fr 1fr;gap:25px;
+  margin-top:32px;padding-top:25px;border-top:1px solid var(--line)
+}
+.about-facts p{font-size:.9rem;margin:5px 0 0;color:var(--ink)}
+.availability{
+  margin-top:28px;padding:22px 24px;background:var(--white);
+  border-left:3px solid var(--leather);box-shadow:var(--shadow)
+}
+.availability strong{display:block;margin-bottom:4px}
+.availability p{margin:0;font-size:.92rem}
+
+/* TRAJETÓRIA */
 #trajetoria{background:var(--paper-deep)}
 .route{position:relative}
-.route:before{content:"";position:absolute;left:11px;top:5px;bottom:5px;width:2px;background:repeating-linear-gradient(180deg,var(--leather) 0 6px,transparent 6px 12px)}
-.route-item{position:relative;padding:0 0 50px 56px}
+.route:before{
+  content:"";position:absolute;left:11px;top:5px;bottom:5px;width:2px;
+  background:repeating-linear-gradient(180deg,var(--leather) 0 6px,transparent 6px 12px)
+}
+.route-item{position:relative;padding:0 0 60px 56px}
 .route-item:last-child{padding-bottom:0}
-.route-node{position:absolute;left:0;top:2px;width:24px;height:24px;border-radius:50%;background:var(--paper-deep);border:2px solid var(--leather);display:flex;align-items:center;justify-content:center}
+.route-node{
+  position:absolute;left:0;top:2px;width:24px;height:24px;border-radius:50%;
+  background:var(--paper-deep);border:2px solid var(--leather);
+  display:flex;align-items:center;justify-content:center
+}
 .route-node:after{content:"";width:8px;height:8px;border-radius:50%;background:var(--espresso)}
 .route-item.current .route-node{background:var(--espresso);border-color:var(--espresso)}
 .route-item.current .route-node:after{background:var(--leather-soft)}
-.route-year{display:block;font-family:"IBM Plex Mono",monospace;font-size:.73rem;color:var(--leather-text);letter-spacing:.05em;margin-bottom:6px}
-.route-item h3{font-size:1.32rem;margin-bottom:2px}
-.route-role{font-size:.93rem;font-weight:600;color:var(--espresso);margin-bottom:10px}
-.route-item ul{list-style:none;max-width:78ch}
-.route-item li{position:relative;padding-left:18px;margin-bottom:7px;color:var(--muted);font-size:.93rem}
+.route-year{
+  display:block;font-family:"IBM Plex Mono",monospace;font-size:.73rem;
+  color:var(--leather);letter-spacing:.05em;margin-bottom:7px
+}
+.route-item h3{font-size:1.42rem;margin-bottom:2px}
+.route-role{font-size:.93rem;font-weight:600;color:var(--espresso);margin-bottom:13px}
+.route-item ul{list-style:none;max-width:82ch}
+.route-item li{
+  position:relative;padding-left:18px;margin-bottom:8px;
+  color:var(--muted);font-size:.94rem
+}
 .route-item li:before{content:"—";position:absolute;left:0;color:var(--leather-soft)}
-.route-tag{display:inline-block;margin-top:10px;padding:5px 10px;background:rgba(156,107,62,.13);color:var(--espresso);font-family:"IBM Plex Mono",monospace;font-size:.67rem}
-.tools-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:22px;margin-top:50px}
-.tool-card{background:var(--paper-deep);border:1px solid rgba(28,23,18,.08);border-radius:16px;padding:26px 24px;transition:transform .25s ease,box-shadow .25s ease,border-color .25s ease}
-.tool-card:hover{transform:translateY(-4px);border-color:var(--leather-soft);box-shadow:0 14px 30px rgba(28,23,18,.08)}
-.tool-card .tool-icon{width:42px;height:42px;margin-bottom:16px;color:var(--leather)}
-.tool-card .tool-icon svg{width:100%;height:100%;stroke:currentColor;fill:none;stroke-width:1.6}
-.tool-card h4{font-family:"IBM Plex Mono",monospace;font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;color:var(--leather-text);margin-bottom:14px}
-.tool-card .tool-tags{display:flex;flex-wrap:wrap;gap:8px}
-.tool-card .tool-tags span{font-size:.85rem;background:var(--paper);border:1px solid rgba(28,23,18,.1);border-radius:8px;padding:5px 11px;color:var(--ink)}
+.route-tag{
+  display:inline-block;margin-top:12px;padding:5px 9px;
+  background:rgba(156,107,62,.13);color:var(--espresso);
+  font-family:"IBM Plex Mono",monospace;font-size:.67rem
+}
+
+/* COMPETÊNCIAS */
+.skills-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:70px}
+.skill-cat{margin-bottom:35px}
+.skill-cat>.eyebrow{display:block;margin-bottom:12px}
+.skill-cat ul{list-style:none}
+.skill-cat li{
+  padding:9px 0;border-bottom:1px solid var(--line);
+  font-size:.92rem;color:var(--espresso-2)
+}
+.skill-cat li:before{content:"";display:inline-block;width:5px;height:5px;background:var(--leather);margin:0 12px 2px 0}
+.soft-tags{display:flex;flex-wrap:wrap;gap:9px}
+.soft-tags span{
+  padding:8px 12px;background:var(--white);border:1px solid var(--line);
+  font-size:.82rem;color:var(--espresso)
+}
+.badges{display:flex;gap:10px;flex-wrap:wrap;margin-top:25px}
+.badge{background:var(--espresso);color:var(--white);padding:11px 14px}
+.badge span{font-family:"IBM Plex Mono",monospace;font-size:.68rem;letter-spacing:.04em}
+
+/* FORMAÇÃO */
+#formacao{background:var(--paper-deep)}
+.edu-list{display:grid;grid-template-columns:1fr 1fr;gap:0 60px}
+.edu-item{padding:20px 0;border-bottom:1px solid var(--line)}
+.edu-item h4{font-size:.98rem;margin-bottom:3px}
+.edu-item p{font-family:"IBM Plex Mono",monospace;font-size:.75rem;color:var(--muted)}
+
+/* CONTATO */
 #contato{background:var(--ink);color:var(--paper);padding:100px 0 55px}
-#contato h2{color:var(--white);font-size:clamp(2.2rem,4vw,3.2rem);max-width:22ch;margin:14px 0 30px}
+#contato h2{color:var(--white);font-size:clamp(2.2rem,4vw,3.5rem);max-width:18ch;margin:14px 0 30px}
 #contato .eyebrow{color:var(--leather-soft)}
-.contact-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:60px;border-top:1px solid rgba(247,242,234,.16);padding-top:35px}
-.contact-list a,.contact-list div{display:block;padding:13px 0;border-bottom:1px solid rgba(247,242,234,.13);color:rgba(255,252,247,.86)}
+.contact-grid{
+  display:grid;grid-template-columns:1.1fr .9fr;gap:60px;
+  border-top:1px solid rgba(247,242,234,.16);padding-top:35px
+}
+.contact-list a,.contact-list div{
+  display:block;padding:13px 0;border-bottom:1px solid rgba(247,242,234,.13);
+  color:rgba(255,252,247,.86)
+}
 .contact-list a:hover{color:var(--leather-soft)}
-.contact-side p{color:rgba(255,252,247,.58);max-width:42ch;font-size:.92rem;margin-bottom:22px}
-.footer-bottom{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;margin-top:60px;padding-top:22px;border-top:1px solid rgba(247,242,234,.13);font-family:"IBM Plex Mono",monospace;font-size:.68rem;color:rgba(255,252,247,.4)}
-#print-fab{position:fixed;right:28px;bottom:28px;z-index:90;border:0;background:var(--espresso);color:var(--white);padding:14px 19px;cursor:pointer;box-shadow:var(--shadow);font-family:"IBM Plex Mono",monospace;font-size:.7rem}
+.contact-side p{color:rgba(255,252,247,.58);max-width:40ch;font-size:.9rem;margin-bottom:22px}
+.footer-bottom{
+  display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;
+  margin-top:60px;padding-top:22px;border-top:1px solid rgba(247,242,234,.13);
+  font-family:"IBM Plex Mono",monospace;font-size:.68rem;color:rgba(255,252,247,.4)
+}
+
+/* ANIMAÇÃO */
 .reveal{opacity:0;transform:translateY(20px);transition:opacity .65s ease,transform .65s ease}
 .reveal.in{opacity:1;transform:none}
+
+/* CV IMPRESSO */
 #print-area{display:none}
+
 @media print{
-  @page{size:A4;margin:12mm 15mm}
+  @page{size:A4;margin:12mm 14mm}
   *{-webkit-print-color-adjust:exact!important;print-color-adjust:exact!important}
-  html,body{background:#fff!important;color:#241D16}
-  #nav,#hero,#problema,#paraquem,#servicos,#metodo,#trajetoria,#ferramentas,#contato,#print-fab{display:none!important}
-  #print-area{display:block!important;background:#fff;font-family:'Inter',Arial,sans-serif;color:#241D16;font-size:8.4pt;line-height:1.46;orphans:3;widows:3}
-  #print-area .cv-header{display:flex;align-items:flex-start;justify-content:space-between;gap:9mm;padding-bottom:2.6mm;margin-bottom:3.6mm;border-bottom:.75pt solid #4A3324}
-  #print-area .cv-header h1{font-family:'Fraunces',Georgia,serif;font-weight:500;font-size:20pt;line-height:1;letter-spacing:-.01em;margin:0 0 1.6mm;color:#1C1712}
-  #print-area .cv-title{font-family:'IBM Plex Mono',monospace;font-size:7.2pt;font-weight:500;letter-spacing:.05em;text-transform:uppercase;color:#9C6B3E;margin-bottom:2.2mm}
-  #print-area .cv-contact{font-size:7.5pt;color:#5E4530;line-height:1.55}
-  #print-area .cv-photo{flex:none;width:22mm;height:27mm;object-fit:cover;object-position:center top;border:.75pt solid #DCD0BC}
-  #print-area h2{font-family:'Fraunces',Georgia,serif;font-weight:500;font-size:10pt;color:#4A3324;border-bottom:.5pt solid #DCD0BC;padding-bottom:1.2mm;margin:4mm 0 2.1mm;break-after:avoid;break-inside:avoid}
-  #print-area h2:first-of-type{margin-top:0}
-  #print-area p{font-size:7.9pt;line-height:1.45;margin-bottom:2mm;color:#372B20}
-  #print-area .entry{margin-top:2.3mm;break-inside:avoid}
-  #print-area .entry:first-of-type{margin-top:0}
-  #print-area .role{display:flex;align-items:baseline;justify-content:space-between;gap:6mm;font-family:'Inter';font-size:8.6pt;font-weight:600;line-height:1.28;color:#1C1712}
-  #print-area .role .role-name{flex:1;color:#1C1712}
-  #print-area .role .role-date{flex:none;font-family:'IBM Plex Mono',monospace;font-weight:500;font-size:7.1pt;letter-spacing:.02em;color:#9C6B3E;white-space:nowrap}
-  #print-area .sub{font-size:7.5pt;font-style:italic;color:#6B5D4F;margin:.5mm 0 1.2mm}
-  #print-area ul{margin:0 0 0 3.6mm;padding:0}
-  #print-area li{font-size:7.5pt;line-height:1.38;margin-bottom:.8mm;color:#372B20;padding-left:1mm}
-  #print-area .cols{display:grid;grid-template-columns:1fr 1fr;gap:0 9mm;break-inside:avoid}
-  #print-area .skill{font-size:7.5pt;line-height:1.48;color:#372B20;break-inside:avoid}
-  #print-area .tail-block{break-inside:avoid}
-  #print-area .footer-cv{margin-top:4mm;padding-top:1.8mm;border-top:.5pt solid #DCD0BC;font-family:'IBM Plex Mono',monospace;font-size:6.6pt;letter-spacing:.03em;color:#9C6B3E;text-align:center}
+  body{background:#fff!important;color:#1C1712}
+  #nav,#hero,#sobre,#trajetoria,#competencias,#formacao,#contato{display:none!important}
+  #print-area{display:block!important;background:#fff;font-family:Arial,sans-serif;color:#222}
+  #print-area .cv-header{
+    display:grid;grid-template-columns:1fr 32mm;gap:10mm;
+    border-bottom:2px solid #1C1712;padding-bottom:6mm;margin-bottom:5mm
+  }
+  #print-area .cv-header h1{
+    font-family:Georgia,serif;font-size:25pt;line-height:1;margin:0 0 2mm
+  }
+  #print-area .cv-title{
+    font-size:9.5pt;font-weight:bold;text-transform:uppercase;
+    color:#4A3324;margin-bottom:3mm
+  }
+  #print-area .cv-contact{font-size:8pt;color:#4A3324;line-height:1.5}
+  #print-area .cv-photo{
+    width:32mm;height:40mm;object-fit:cover;object-position:center top;
+    border:1px solid #DCD0BC
+  }
+  #print-area h2{
+    font-family:Georgia,serif;font-size:12pt;color:#4A3324;
+    border-bottom:1px solid #DCD0BC;padding-bottom:1.5mm;margin:5mm 0 2.5mm
+  }
+  #print-area p{font-size:8.2pt;line-height:1.42;margin-bottom:2mm}
+  #print-area .role{
+    font-size:8.7pt;font-weight:bold;margin-top:3mm;line-height:1.25
+  }
+  #print-area .role span{float:right;font-weight:normal}
+  #print-area .sub{font-size:7.8pt;font-style:italic;color:#6B5D4F;margin:1mm 0}
+  #print-area ul{margin:1mm 0 1mm 4mm;padding-left:3mm}
+  #print-area li{font-size:7.8pt;line-height:1.35;margin-bottom:1mm}
+  #print-area .cols{display:grid;grid-template-columns:1fr 1fr;gap:8mm}
+  #print-area .skill{font-size:7.8pt;line-height:1.45}
+  #print-area .footer-cv{
+    margin-top:4mm;padding-top:2mm;border-top:1px solid #DCD0BC;
+    font-size:7pt;color:#6B5D4F;text-align:center
+  }
 }
-@media(max-width:980px){
+
+/* RESPONSIVO */
+@media(max-width:900px){
   .wrap{padding:0 24px}
-  .nav-links{gap:16px;overflow-x:auto;-webkit-overflow-scrolling:touch;max-width:52vw;scrollbar-width:none}
-  .nav-links::-webkit-scrollbar{display:none}
-  .nav-links a{flex:none;white-space:nowrap}
-  .nav-cta{flex:none;white-space:nowrap}
-  .hero-layout{grid-template-columns:1fr;gap:40px}
+  .nav-links a{display:none}
+  .hero-layout{grid-template-columns:1fr;gap:35px}
   .hero-photo-wrap{justify-content:flex-start}
   .hero-photo-card{width:190px}
-  .hero-content{padding-top:120px}
-  .problema-grid{grid-template-columns:1fr;gap:45px}
-  .segmentos{grid-template-columns:1fr 1fr}
-  .servicos-grid{grid-template-columns:1fr}
-  .metodo-steps{grid-template-columns:1fr 1fr;gap:30px 20px}
-  .metodo-steps::before{display:none}
-  .contact-grid{grid-template-columns:1fr;gap:40px}
-  #print-fab{right:15px;bottom:15px}
+  .hero-content{padding-top:110px}
+  #sobre .about-grid,.skills-grid,.contact-grid{grid-template-columns:1fr;gap:40px}
+  .about-facts,.edu-list{grid-template-columns:1fr}
+  .hero-meta{gap:12px}
 }
-@media(max-width:600px){
+@media(max-width:560px){
   section{padding:80px 0}
   .section-head{display:block}
   .section-head .eyebrow{display:block;margin-top:8px}
-  .hero h1{font-size:2.6rem}
-  .segmentos{grid-template-columns:1fr}
-  .metodo-steps{grid-template-columns:1fr}
-  .sinais-card{padding:18px}
+  .hero h1{font-size:3.5rem}
 }
 </style>
-<base target="_blank">
 </head>
 
 <body>
-
-<a href="#problema" class="skip-link">Pular para o conteúdo</a>
 
 <nav id="nav">
   <div class="wrap">
     <div class="nav-mark"><span class="dot"></span>BRUNO FARIA</div>
     <div class="nav-links">
-      <a href="#problema">Diagnóstico</a>
-      <a href="#paraquem">Segmentos</a>
-      <a href="#servicos">Especialidades</a>
-      <a href="#metodo">Metodologia</a>
+      <a href="#sobre">Sobre</a>
       <a href="#trajetoria">Trajetória</a>
-      <a href="#ferramentas">Tecnologias</a>
+      <a href="#competencias">Competências</a>
+      <a href="#formacao">Formação</a>
       <a href="#contato">Contato</a>
+      <button class="nav-print-btn" onclick="printCV()">Imprimir currículo</button>
     </div>
-    <button class="nav-cta" onclick="document.getElementById('contato').scrollIntoView({behavior:'smooth'})">Conectar</button>
   </div>
 </nav>
 
-<header id="hero">
+<header id="hero" class="hero">
   <div class="hero-bg"></div>
   <div class="hero-grid"></div>
+
   <div class="hero-content">
     <div class="wrap">
       <div class="hero-layout">
+
         <div>
-          <div class="eyebrow hero-eyebrow"><span class="rule"></span>Portfólio Profissional · TI · Infraestrutura · Sistemas · Operações</div>
-          <h1>Bruno<br><em>Faria</em></h1>
-          <p class="hero-manifesto"><strong>19 anos de experiência</strong> em TI, infraestrutura, sistemas, segurança da informação e operações. Perfil híbrido entre gestão e tecnologia, com atuação em ambientes críticos, projetos de implantação e transformação operacional.</p>
-          <p class="hero-quote">"A TI é transversal na pirâmide da empresa. Não está em cima nem embaixo. Está em todo lugar, da entrada à saída."</p>
-          <div class="hero-ctas">
-            <button class="btn-primary" onclick="document.getElementById('servicos').scrollIntoView({behavior:'smooth'})">EXPLORAR ESPECIALIDADES</button>
-            <button class="btn-secondary" onclick="document.getElementById('contato').scrollIntoView({behavior:'smooth'})">ENTRAR EM CONTATO</button>
+          <div class="eyebrow hero-eyebrow">
+            <span class="rule"></span>
+            Gestão de TI · Infraestrutura · Sistemas · Projetos
           </div>
-          <div class="hero-meta"><span>◆ 19 ANOS DE EXPERIÊNCIA</span><span>◆ PORTFÓLIO & ESPECIALIDADES</span><span>◆ TODO O BRASIL</span></div>
+
+          <h1>Bruno<br><em>Faria</em></h1>
+
+          <div class="hero-title">
+            Gestor de TI | Gestor de Sistemas | Infraestrutura & Operações
+          </div>
+
+          <p class="hero-tagline">
+            Profissional com <strong>19 anos de carreira em TI</strong>, perfil híbrido entre
+            gestão e operação técnica, experiência real em liderança de equipes, infraestrutura,
+            sistemas corporativos, projetos e ambientes críticos.
+          </p>
+
+          <div class="hero-highlights">
+            <span>GESTÃO DE EQUIPES</span>
+            <span>INFRAESTRUTURA DE TI</span>
+            <span>REDES & TELECOM</span>
+            <span>SISTEMAS</span>
+            <span>PROJETOS</span>
+            <span>KPIs · SLAs</span>
+          </div>
+
+          <div class="hero-meta">
+            <span>◆ 19 ANOS DE EXPERIÊNCIA</span>
+            <span>◆ DISPONIBILIDADE IMEDIATA</span>
+            <span>◆ TODO O BRASIL</span>
+          </div>
         </div>
+
         <div class="hero-photo-wrap">
           <div class="hero-photo-card">
-            <img class="hero-photo" src="https://raw.githubusercontent.com/bfariadti/portfolio-bruno-faria-img/main/portfolio-bruno-faria-img.jpg?v=20260826" alt="Bruno Faria — Especialista em TI, Infraestrutura e Operações" fetchpriority="high" decoding="async">
-            <div class="hero-photo-caption">TI · INFRAESTRUTURA · SISTEMAS · OPERAÇÕES · SEGURANÇA</div>
+            <img
+              class="hero-photo"
+              src="https://raw.githubusercontent.com/bfariadti/portfolio-bruno-faria-img/main/portfolio-bruno-faria-img.jpg?v=20260826"
+              alt="Bruno Faria — Gestor de TI"
+            >
+            <div class="hero-photo-caption">GESTÃO DE TI · INFRAESTRUTURA · SISTEMAS</div>
           </div>
         </div>
+
       </div>
     </div>
   </div>
 </header>
 
-<section id="problema">
+<section id="sobre">
   <div class="wrap">
-    <div class="section-head reveal"><h2>Diagnóstico operacional</h2><span class="eyebrow">01 — O que eu observo</span></div>
-    <div class="problema-grid">
-      <div class="problema-text reveal">
-        <h3>A escolha errada de sistema — ou de infraestrutura — custa muito mais do que parece.</h3>
-        <p>Custa <strong>dinheiro</strong>. Custa <strong>perda de mercado</strong>. Custa <strong>mão de obra</strong>, porque durante projetos de implantação mal conduzidos, empresas perdem colaboradores.</p>
-        <p>Se o time está fazendo retrabalho, se há sensação de trabalhar sem ver resultado, se oportunidades passam porque o sistema ou a rede não acompanham o negócio — <strong>o problema frequentemente não é a equipe. É a ferramenta, a infraestrutura ou a forma como foi implantada.</strong></p>
-        <p>Sistemas e infraestrutura existem para que a empresa foque no seu negócio. Quando roubam tempo, energia e dinheiro, algo precisa ser revisto.</p>
-        <div class="problema-cta"><strong>Abordagem consultiva.</strong><p>Com 19 anos de experiência em troca e implantação de sistemas, gestão de equipes de TI e projetos de infraestrutura, atuo com diagnóstico honesto: não digo o que se quer ouvir, mas aponto o caminho que entrega o resultado que o negócio precisa.</p></div>
-      </div>
-      <div class="problema-sinais reveal">
-        <div class="sinais-card"><div class="num">01</div><h4>Retrabalho constante</h4><p>Equipe gasta mais tempo contornando o sistema do que usando-o.</p></div>
-        <div class="sinais-card"><div class="num">02</div><h4>Perda de oportunidades</h4><p>O mercado avança e o sistema não acompanha a velocidade do negócio.</p></div>
-        <div class="sinais-card"><div class="num">03</div><h4>Rotatividade de equipe</h4><p>Colaboradores desistem porque a ferramenta ou a infraestrutura dificultam em vez de ajudar.</p></div>
-        <div class="sinais-card"><div class="num">04</div><h4>Dados que não conversam</h4><p>Áreas isoladas, planilhas paralelas e decisões no escuro.</p></div>
-        <div class="sinais-card"><div class="num">05</div><h4>Infraestrutura frágil</h4><p>Rede instável, backups falhos, servidores sem manutenção, segurança em risco.</p></div>
-        <div class="sinais-card"><div class="num">06</div><h4>Sem visão de KPIs</h4><p>Não se sabe o que medir, nem se a operação está indo bem.</p></div>
-        <div class="sinais-card"><div class="num">07</div><h4>Segurança da informação negligenciada</h4><p>Sem políticas de acesso, sem LGPD, dados expostos, risco de vazamento.</p></div>
-        <div class="sinais-card"><div class="num">08</div><h4>TI sem gestão</h4><p>Equipe técnica sem direção, sem processos, sem prioridade clara.</p></div>
-      </div>
+    <div class="section-head reveal">
+      <h2>Sobre mim</h2>
+      <span class="eyebrow">01 — Perfil</span>
     </div>
-  </div>
-</section>
 
-<section id="paraquem">
-  <div class="wrap">
-    <div class="section-head reveal"><h2>Setores de atuação</h2><span class="eyebrow">02 — Segmentos</span></div>
-    <p style="max-width:70ch;font-size:1.05rem;color:var(--espresso-2);margin-bottom:10px" class="reveal">Experiência prática dentro da operação: indústrias, portos, supermercados, centros de distribuição, concessionárias, escritórios e infraestrutura corporativa. <strong>Cada setor tem sua linguagem — e sei traduzir para tecnologia.</strong></p>
-    <div class="segmentos">
-      <div class="seg-card reveal"><h4>🛒 Varejo & Atacado</h4><p>Supermercados, depósitos, distribuidoras. Frente de loja, WMS, força de vendas, logística reversa.</p><span class="seg-tag">PDV · WMS · FORÇA DE VENDAS</span></div>
-      <div class="seg-card reveal"><h4>🚢 Logística Portuária</h4><p>Operações portuárias, movimentação de cargas, integração porto-terra, materiais de projetos offshore.</p><span class="seg-tag">PORTOS · OPERAÇÕES · OFFSHORE</span></div>
-      <div class="seg-card reveal"><h4>⛽ Óleo, Gás & Indústria</h4><p>Field service, materiais de projetos Petrobras, gestão de contratos, infraestrutura crítica, Telecom.</p><span class="seg-tag">PETROBRAS · FIELD SERVICE · TELECOM</span></div>
-      <div class="seg-card reveal"><h4>🍽️ Alimentos & Bebidas</h4><p>Cadeia de frio, rastreabilidade, controle de validade, logística de distribuição urbana.</p><span class="seg-tag">RASTREABILIDADE · WMS · DISTRIBUIÇÃO</span></div>
-      <div class="seg-card reveal"><h4>🛍️ E-commerce & Marketplaces</h4><p>Análise de mercado, integração de estoque, catálogo automatizado, integração com ERP.</p><span class="seg-tag">INTEGRAÇÕES · APIs · MARKETPLACES</span></div>
-      <div class="seg-card reveal"><h4>🏥 Saúde & Hospitalar</h4><p>Sistemas hospitalares, gestão de processos assistenciais, relatórios e análise de dados clínicos.</p><span class="seg-tag">MV SOUL · REPORTS · PROCESSOS</span></div>
-      <div class="seg-card reveal"><h4>🏢 Infraestrutura Corporativa</h4><p>Redes, servidores, datacenter, segurança da informação, LGPD, gestão de equipes de TI e projetos de instalação.</p><span class="seg-tag">REDES · SERVIDORES · LGPD · CFTV</span></div>
-      <div class="seg-card reveal"><h4>⚙️ Indústria & Manufatura</h4><p>Projetos de instalação, cabeamento estruturado, fibra óptica, fusão, racks, equipamentos de rede e controle de acesso.</p><span class="seg-tag">CABEAMENTO · FIBRA · RACKS · CFTV</span></div>
-    </div>
-  </div>
-</section>
+    <div class="about-grid">
+      <div class="about-photo reveal">
+        <img
+          src="https://raw.githubusercontent.com/bfariadti/portfolio-bruno-faria-img/main/portfolio-bruno-faria-img.jpg?v=20260826"
+          alt="Bruno Faria"
+        >
+        <div class="frame-tag">BRUNO FARIA · CAMPOS DOS GOYTACAZES, RJ</div>
+      </div>
 
-<section id="servicos">
-  <div class="wrap">
-    <div class="section-head reveal"><h2>Especialidades</h2><span class="eyebrow">03 — Áreas de domínio</span></div>
-    <div class="servicos-grid">
-      <div class="servico-card reveal">
-        <div class="serv-icon"><svg viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="6" rx="1"/><rect x="2" y="12" width="20" height="9" rx="1"/><circle cx="6" cy="6" r="1"/><circle cx="6" cy="16.5" r="1"/></svg></div>
-        <h3>Infraestrutura & Instalações</h3>
-        <p>Construção e gestão de departamento de TI do zero. Projetos de instalação e implantação de infraestrutura completa: redes, servidores, cabeamento estruturado, fibra óptica, fusão, racks, Wi-Fi, CFTV e controle de acesso.</p>
-        <div class="serv-tags"><span>Redes & Telecom</span><span>Wi-Fi</span><span>Servidores</span><span>Cabeamento Estruturado</span><span>Fibra Óptica</span><span>Fusão</span><span>Racks</span><span>Mikrotik</span><span>CFTV</span><span>Controle de Acesso</span></div>
-      </div>
-      <div class="servico-card reveal">
-        <div class="serv-icon"><svg viewBox="0 0 24 24"><path d="M12 3l7 3v5c0 5-3.5 8.5-7 10-3.5-1.5-7-5-7-10V6l7-3z"/><path d="M9 12l2 2 4-4"/></svg></div>
-        <h3>Segurança da Informação & LGPD</h3>
-        <p>Implantação de políticas de segurança, controles de acesso, gestão de permissões, conscientização, documentação e adequação à LGPD. Proteção de dados e conformidade regulatória.</p>
-        <div class="serv-tags"><span>LGPD</span><span>Segurança da Informação</span><span>Políticas de Acesso</span><span>Controles</span><span>Conscientização</span><span>Documentação</span><span>Permissões</span><span>Auditoria</span></div>
-      </div>
-      <div class="servico-card reveal">
-        <div class="serv-icon"><svg viewBox="0 0 24 24"><ellipse cx="12" cy="6" rx="8" ry="3"/><path d="M4 6v12c0 1.66 3.58 3 8 3s8-1.34 8-3V6"/><path d="M4 12c0 1.66 3.58 3 8 3s8-1.34 8-3"/></svg></div>
-        <h3>Sistemas & Integrações</h3>
-        <p>Capitação, estudo e implantação de sistemas. ERP, WMS, TMS, RH, ponto eletrônico, contábil e fiscal. Integração entre plataformas e migração de dados.</p>
-        <div class="serv-tags"><span>ERP</span><span>WMS</span><span>TMS</span><span>PDV</span><span>RH & Ponto</span><span>Portaria 667</span><span>Contábil/Fiscal</span><span>SQL</span><span>APIs</span><span>SAP</span></div>
-      </div>
-      <div class="servico-card reveal">
-        <div class="serv-icon"><svg viewBox="0 0 24 24"><path d="M1 8l9-5 9 5-9 5-9-5z"/><path d="M1 8v8l9 5 9-5V8"/><path d="M10 13v8"/><path d="M1 12l9 5 9-5"/></svg></div>
-        <h3>Logística & Operações</h3>
-        <p>Planejamento e otimização de processos logísticos. WMS, separação por voz, comando de voz, distribuição, força de vendas e centros de distribuição.</p>
-        <div class="serv-tags"><span>WMS</span><span>Centro de Distribuição</span><span>Força de Vendas</span><span>Comando de Voz</span><span>Distribuição</span><span>Depósitos</span></div>
-      </div>
-      <div class="servico-card reveal">
-        <div class="serv-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"/></svg></div>
-        <h3>Gestão & Estratégia</h3>
-        <p>Gestão de equipes de TI, projetos de implantação, análise de requisitos, product management, análise de mercado para e-commerce e reorganização operacional.</p>
-        <div class="serv-tags"><span>Gestão de Equipes</span><span>Gestão de Projetos</span><span>Análise de Requisitos</span><span>Product Manager</span><span>Análise de Mercado</span><span>KPIs & SLAs</span><span>Backlog</span><span>Roadmap</span></div>
-      </div>
-    </div>
-  </div>
-</section>
+      <div class="about-copy reveal">
+        <p>
+          Natural de <strong>Campos dos Goytacazes, RJ</strong>, construí minha carreira em
+          Tecnologia da Informação desde 2007, evoluindo de funções técnicas e operacionais
+          para posições de liderança em <strong>TI, infraestrutura, sistemas, projetos e operações</strong>.
+        </p>
 
-<section id="metodo">
-  <div class="wrap">
-    <div class="section-head reveal"><h2>Como eu conduzo projetos</h2><span class="eyebrow">04 — Metodologia</span></div>
-    <p style="max-width:70ch;font-size:1.05rem;color:var(--espresso-2);margin-bottom:10px" class="reveal">Não acredito em soluções prontas. Cada negócio tem sua realidade, cultura e gargalos. A abordagem é <strong>consultiva, transparente e focada em resultado mensurável.</strong></p>
-    <div class="metodo-steps">
-      <div class="step reveal"><div class="step-num">01</div><h4>Diagnóstico</h4><p>Imersão na operação, escuta das áreas, mapeamento de processos e identificação de onde o sistema ou a infraestrutura falham — ou onde faltam.</p></div>
-      <div class="step reveal"><div class="step-num">02</div><h4>Planejamento</h4><p>Definição do caminho: troca, implantação, instalação, integração ou reorganização. Orçamento realista, cronograma e indicadores de sucesso.</p></div>
-      <div class="step reveal"><div class="step-num">03</div><h4>Implantação</h4><p>Condução da mudança com a equipe, treinamento, testes, go-live e acompanhamento pós-implantação. Gestão de equipes e fornecedores.</p></div>
-      <div class="step reveal"><div class="step-num">04</div><h4>Acompanhamento</h4><p>Mensuração de resultados, ajustes necessários e garantia de que o sistema e a infraestrutura entreguem valor real ao negócio.</p></div>
+        <p>
+          Minha experiência é marcada pela combinação entre <strong>gestão e conhecimento técnico</strong>.
+          Tenho facilidade para atuar próximo das equipes, entender problemas na operação,
+          organizar prioridades e transformar necessidades do negócio em ações técnicas,
+          projetos e resultados.
+        </p>
+
+        <p>
+          Ao longo de 19 anos, atuei em ambientes corporativos, logísticos, portuários,
+          varejistas e de tecnologia, conduzindo equipes, projetos de infraestrutura,
+          implantação de sistemas, operações críticas e relacionamento com clientes,
+          fornecedores e áreas de negócio.
+        </p>
+
+        <div class="about-facts">
+          <div>
+            <span class="eyebrow">Posicionamento</span>
+            <p>Gestor de TI com perfil híbrido, capaz de transitar entre gestão, operação e tecnologia.</p>
+          </div>
+          <div>
+            <span class="eyebrow">Disponibilidade</span>
+            <p>Disponibilidade imediata para atuar em qualquer região do Brasil.</p>
+          </div>
+        </div>
+
+        <div class="availability">
+          <strong>Disponível para novos desafios</strong>
+          <p>
+            Total disponibilidade para projetos e posições presenciais, híbridas ou home office,
+            independentemente da cidade ou estado.
+          </p>
+        </div>
+      </div>
     </div>
   </div>
 </section>
 
 <section id="trajetoria">
   <div class="wrap">
-    <div class="section-head reveal"><h2>Trajetória profissional</h2><span class="eyebrow">05 — Experiência</span></div>
+    <div class="section-head reveal">
+      <h2>Trajetória profissional</h2>
+      <span class="eyebrow">02 — Experiência</span>
+    </div>
+
     <div class="route">
+
       <div class="route-item current reveal">
         <div class="route-node"></div>
-        <span class="route-year">2026 — ATUAL</span>
-        <h3>Unimed Campos</h3>
-        <div class="route-role">Analista de Sistemas N3 · Sistema Hospitalar MV Soul</div>
-        <ul><li>Suporte crítico a sistema hospitalar, relatórios SQL e desenvolvimento de recursos médicos.</li></ul>
+        <span class="route-year">OUT. 2026 — ATUAL</span>
+        <h3>Gran Services S.A.</h3>
+        <div class="route-role">Analista de Sistemas Sênior</div>
+        <ul>
+          <li>Sustentação N3 e evolução de sistemas corporativos, com análise e resolução de incidentes críticos e apoio à transição de sistemas legados (SGP) para a plataforma corporativa MIO.</li>
+          <li>Construção, validação e monitoramento de integrações via APIs, além de consultas e análises em bancos de dados SQL Server e Oracle, assegurando consistência e desempenho das informações.</li>
+          <li>Atuação como interface entre negócio e TI, realizando levantamento de requisitos, especificações funcionais e técnicas e apoio aos usuários-chave na melhoria contínua dos processos.</li>
+        </ul>
       </div>
+
+      <div class="route-item reveal">
+        <div class="route-node"></div>
+        <span class="route-year">MAI. — OUT. 2026</span>
+        <h3>Unimed Campos</h3>
+        <div class="route-role">Analista de Sistemas</div>
+        <ul>
+          <li>Suporte Nível 3 ao sistema hospitalar MV Soul, com atendimento às equipes assistenciais e administrativas e sustentação dos processos hospitalares.</li>
+          <li>Desenvolvimento e manutenção de relatórios Report SQL e formulários no MV PEP, além de análise de incidentes e levantamento de requisitos.</li>
+        </ul>
+      </div>
+
       <div class="route-item reveal">
         <div class="route-node"></div>
         <span class="route-year">2026</span>
         <h3>Somec Diesel</h3>
-        <div class="route-role">Analista de Desenvolvimento de Sistemas · Infraestrutura completa</div>
-        <ul><li>Desenvolvimento, servidores, backup, rede, Wi-Fi e Mikrotik — operação TI end-to-end.</li></ul>
+        <div class="route-role">Analista de Desenvolvimento de Sistemas</div>
+        <ul>
+          <li>Atuação em desenvolvimento de sistemas e suporte direto à operação de TI.</li>
+          <li>Responsabilidade técnica pela infraestrutura do ambiente, incluindo servidores, backup, rede cabeada e Wi-Fi.</li>
+          <li>Administração e manutenção de ambientes de rede, incluindo equipamentos Mikrotik.</li>
+          <li>Utilização de SQL e tecnologias de integração para análise e sustentação dos sistemas corporativos.</li>
+        </ul>
       </div>
+
       <div class="route-item reveal">
         <div class="route-node"></div>
         <span class="route-year">2025</span>
-        <h3>Minsait — Field Service Petrobras</h3>
-        <div class="route-role">Gestor de Serviços & Qualidade · Preposto Regional</div>
+        <h3>Minsait</h3>
+        <div class="route-role">Gestor de Serviços · Gestor de Qualidade · Preposto Regional — Field Service Petrobras</div>
         <ul>
-          <li>Gestão de <strong>20+ profissionais de TI e Telecom</strong> na Bacia de Campos e ES.</li>
-          <li>KPIs, SLAs, produtividade, backlog, custos, contratos e planejamento de serviços.</li>
-          <li>Infraestrutura e telecom: cabeamento estruturado, fibra óptica, fusão, racks, equipamentos de rede, Wi-Fi e projetos de instalação.</li>
+          <li>Gestão de serviços na Bacia de Campos e Espírito Santo, fazendo a interface entre as necessidades da Petrobras, fiscais, supervisores e equipes técnicas.</li>
+          <li>Coordenação macro das demandas e priorização das atividades, atuando diretamente com os supervisores responsáveis pela execução.</li>
+          <li>Gestão de mais de <strong>20 profissionais de TI e Telecom</strong>, distribuídos pelas bases da região, além da interface com analistas e equipes locais.</li>
+          <li>Responsabilidade direta por KPIs, SLAs, produtividade, backlog, escalas, atendimento ao cliente, fornecedores, contratos, relatórios gerenciais, custos, multas, segurança das equipes e planejamento de serviços.</li>
+          <li>Acompanhamento da qualidade e execução de serviços de infraestrutura e telecomunicações, incluindo cabeamento estruturado, passagem e ativação de pontos de rede, fibra óptica, fusão, equipamentos de rede, racks e Wi-Fi.</li>
+          <li>Atuação próxima à operação, acompanhando problemas em campo e apoiando tecnicamente a equipe na busca por qualidade, prazo e solução.</li>
+          <li>Atuação nas bases Edivit, Imbetiba, Tubos/Impoassica, Cabiúnas e UTGC Linhares/ES.</li>
         </ul>
-        <span class="route-tag">PETROBRAS · BACIA DE CAMPOS · ESPÍRITO SANTO</span>
+        <span class="route-tag">BACIA DE CAMPOS · ESPÍRITO SANTO · PETROBRAS</span>
       </div>
+
       <div class="route-item reveal">
         <div class="route-node"></div>
         <span class="route-year">2023 — 2024</span>
-        <h3>Aliseo S.A. — Porto & Logística</h3>
-        <div class="route-role">Supervisor de TI · Segurança da Informação & LGPD</div>
+        <h3>Aliseo S.A.</h3>
+        <div class="route-role">Supervisor de TI — ingresso como Analista de Dados Sênior</div>
         <ul>
-          <li>Liderança de equipe de 15 profissionais; infraestrutura, projetos de instalação, CFTV, controle de acesso.</li>
-          <li>Responsabilidade direta pela <strong>Segurança da Informação e LGPD</strong>: políticas, controles de acesso, permissões, documentação, conscientização, implantação e acompanhamento.</li>
-          <li>Implantação do ERP Sankhya; AD, GPO, DNS, Microsoft 365.</li>
+          <li>Supervisão da equipe de TI composta por analista, técnicos de TI, técnico de elétrica estabilizada e equipe terceirizada de Telecom com aproximadamente 15 profissionais.</li>
+          <li>Coordenação de projetos de infraestrutura, participando presencialmente das atividades de cabeamento estruturado, fibra óptica, fusão, racks, servidores, switches, Mikrotik e Wi-Fi.</li>
+          <li>Coordenação da implantação de CFTV, controle de acesso, eletroímãs, sensores e sistema de segurança HikCentral.</li>
+          <li>Responsabilidade direta pela Segurança da Informação e LGPD, incluindo políticas, controles de acesso, permissões, documentação, conscientização, implantação e acompanhamento dos controles.</li>
+          <li>Administração de ambiente Windows, Active Directory, GPO, DNS, Microsoft 365 e recursos relacionados ao ambiente corporativo.</li>
+          <li>Gestão e implantação do ERP Sankhya na base, em conjunto com as áreas de negócio e logística.</li>
+          <li>Atuação em projetos e processos do ambiente portuário, integrando tecnologia, infraestrutura, logística e operação.</li>
         </ul>
       </div>
+
       <div class="route-item reveal">
         <div class="route-node"></div>
         <span class="route-year">2022 — 2023</span>
         <h3>BBM Logística</h3>
-        <div class="route-role">Consultor de Integrações · TMS & SAP</div>
-        <ul><li>Integrações TMS com SQL, PostgreSQL, Oracle/PL-SQL, APIs e SAP FI/CO.</li></ul>
+        <div class="route-role">Consultor de Desenvolvimento de Integrações — PJ</div>
+        <ul>
+          <li>Desenvolvimento de integrações entre sistemas TMS dos clientes e a nova plataforma de TMS desenvolvida pela BBM em parceria com a TOTVS.</li>
+          <li>Atuação com KMM TMS e Senior TMS, realizando mapeamento de informações, levantamento técnico, documentação e desenvolvimento dos scripts.</li>
+          <li>Desenvolvimento de integrações de documentos logísticos e financeiros utilizando SQL, PostgreSQL, Oracle/PLSQL e APIs.</li>
+          <li>Desenvolvimento de integrações com SAP FI e SAP CO.</li>
+          <li>Participação no projeto de desenvolvimento e implantação da plataforma digital de TMS nos clientes.</li>
+        </ul>
+        <span class="route-tag">TMS · SQL · POSTGRESQL · ORACLE · PL/SQL · APIs · SAP</span>
       </div>
+
       <div class="route-item reveal">
         <div class="route-node"></div>
         <span class="route-year">2021 — 2023</span>
-        <h3>NovoVarejo</h3>
-        <div class="route-role">Product Manager · E-commerce & Marketplaces</div>
+        <h3>NovoVarejo — NVPC</h3>
+        <div class="route-role">Product Manager</div>
         <ul>
-          <li>Gestão de produto digital; integração de estoques de concessionárias com marketplaces.</li>
-          <li>Produto gerando <strong>milhares de anúncios automaticamente</strong> a partir do estoque.</li>
+          <li>Responsável pela gestão do produto digital, liderando funcionalmente as demandas junto a aproximadamente 10 desenvolvedores, 5 profissionais de DevOps, 3 designers, coordenação de desenvolvimento e equipe de Customer Success.</li>
+          <li>Definição de roadmap, priorização de demandas, acompanhamento de entregas e evolução do produto.</li>
+          <li>Condução de onboarding de clientes, reuniões técnicas, apresentação das funcionalidades e suporte à equipe de Customer Success.</li>
+          <li>Gestão de integrações com DMS Dealernet Workflow, Dealernet Windows e Apollo/Linx.</li>
+          <li>Integração dos estoques de concessionárias com Mercado Livre, Americanas e sites próprios.</li>
+          <li>O produto permitia transformar o estoque de peças das concessionárias em milhares de anúncios automaticamente, podendo ultrapassar 10 mil anúncios em poucos dias conforme o mix de produtos, inclusive com variações por veículo e aplicação.</li>
         </ul>
+        <span class="route-tag">PRODUCT MANAGEMENT · DMS · APIs · MARKETPLACES</span>
       </div>
+
       <div class="route-item reveal">
         <div class="route-node"></div>
         <span class="route-year">2007 — 2021</span>
-        <h3>Barcelos & Cia — Rede de Supermercados</h3>
-        <div class="route-role">Analista de Negócios e Sistemas · Varejo, WMS, Logística & Projetos</div>
+        <h3>Barcelos & Cia</h3>
+        <div class="route-role">Analista de Negócios e Sistemas · Projetos · Sistemas de Varejo e Logística</div>
         <ul>
-          <li>Responsável pelo sistema de Frente de Loja de <strong>15 supermercados e ~60 PDVs</strong>.</li>
-          <li>Projetos de WMS, comando de voz, autoatendimento, comandas eletrônicas, integrações.</li>
-          <li>Projetos de instalação e implantação de infraestrutura de novas lojas: servidores, concentradores, checkout, periféricos, rede, balanças, check-prices.</li>
-          <li>Atuação direta na operação logística do centro de distribuição 24h.</li>
+          <li>Principal responsável pelo sistema de Frente de Loja de uma rede com aproximadamente 15 supermercados e cerca de 60 PDVs, além de restaurantes, unidade de atacado e varejo e operação de distribuição.</li>
+          <li>Responsável por todo o ciclo de sistemas de novas lojas: planejamento, montagem, periféricos, servidores/concentradores, checkout, recepção, tesouraria, check-prices, balanças, testes, treinamento, entrada em produção e pós-inauguração.</li>
+          <li>Especialista e ponto focal do sistema de Frente de Loja, sistemas de Força de Vendas e posteriormente do WMS.</li>
+          <li>Participação direta em projetos de troca de sistema de Frente de Loja, implantação de WMS, separação por comando de voz e implantação do sistema SOMA/NovoVarejo.</li>
+          <li>Implantação do primeiro sistema de autoatendimento/auto-serviço de PDV da cidade, permitindo que o cliente realizasse o próprio atendimento.</li>
+          <li>Implantação de sistema de comandas eletrônicas em restaurantes e integração com sistema de cancelas de estacionamento.</li>
+          <li>Entre 2020 e 2021, atuação diretamente dentro da operação logística como responsável pelo sistema WMS, acompanhando os processos do centro de distribuição e a operação 24 horas.</li>
+          <li>Atuação em projetos de integração de anúncios de peças em Mercado Livre, Americanas/B2W e sites próprios.</li>
         </ul>
-        <span class="route-tag">15+ ANOS · VAREJO · WMS · PDV · LOGÍSTICA · INFRAESTRUTURA</span>
+        <span class="route-tag">15+ ANOS · VAREJO · WMS · PDV · LOGÍSTICA · PROJETOS</span>
       </div>
+
     </div>
   </div>
 </section>
 
-<section id="ferramentas">
+<section id="competencias">
   <div class="wrap">
-    <div class="section-head reveal"><h2>Tecnologias & Sistemas</h2><span class="eyebrow">06 — Stack</span></div>
-    <div class="tools-grid">
-      <div class="tool-card reveal"><div class="tool-icon"><svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="4" rx="1"/><rect x="3" y="10" width="18" height="4" rx="1"/><rect x="3" y="16" width="18" height="4" rx="1"/></svg></div><h4>Gestão & Chamados</h4><div class="tool-tags"><span>Monday</span><span>GLPI</span></div></div>
-      <div class="tool-card reveal"><div class="tool-icon"><svg viewBox="0 0 24 24"><ellipse cx="12" cy="6" rx="8" ry="3"/><path d="M4 6v12c0 1.66 3.58 3 8 3s8-1.34 8-3V6"/><path d="M4 12c0 1.66 3.58 3 8 3s8-1.34 8-3"/></svg></div><h4>ERP</h4><div class="tool-tags"><span>Consinco</span><span>Sankhya</span><span>Gemco</span><span>Winthor</span><span>Senior ERP</span></div></div>
-      <div class="tool-card reveal"><div class="tool-icon"><svg viewBox="0 0 24 24"><path d="M3 8l9-5 9 5-9 5-9-5z"/><path d="M3 8v8l9 5 9-5V8"/><path d="M12 13v8"/></svg></div><h4>WMS</h4><div class="tool-tags"><span>Consinco</span><span>Sankhya</span><span>Winthor</span></div></div>
-      <div class="tool-card reveal"><div class="tool-icon"><svg viewBox="0 0 24 24"><rect x="1" y="8" width="14" height="9" rx="1"/><path d="M15 11h4l3 3v3h-7z"/><circle cx="6" cy="19" r="2"/><circle cx="17.5" cy="19" r="2"/></svg></div><h4>TMS</h4><div class="tool-tags"><span>Senior TMS</span><span>KMN WMS/TMS</span></div></div>
-      <div class="tool-card reveal"><div class="tool-icon"><svg viewBox="0 0 24 24"><path d="M5 17h14M5 17a2 2 0 100-4h14a2 2 0 100 4M6 13l1.5-5h9L18 13"/><circle cx="8" cy="19" r="1.5"/><circle cx="16" cy="19" r="1.5"/></svg></div><h4>DMS — Concessionárias</h4><div class="tool-tags"><span>Dealernet</span><span>Apollo Linx</span><span>NBS</span></div></div>
-      <div class="tool-card reveal"><div class="tool-icon"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="6" rx="1"/><rect x="3" y="15" width="18" height="6" rx="1"/><circle cx="7" cy="6" r="1"/><circle cx="7" cy="18" r="1"/></svg></div><h4>Infraestrutura & Redes</h4><div class="tool-tags"><span>Microsoft 365</span><span>Windows Server</span><span>Linux</span><span>Mikrotik</span><span>Redes</span><span>Cabeamento Estruturado</span><span>Fibra Óptica</span><span>Fusão</span><span>Racks</span><span>Wi-Fi</span></div></div>
-      <div class="tool-card reveal"><div class="tool-icon"><svg viewBox="0 0 24 24"><ellipse cx="12" cy="5" rx="7" ry="3"/><path d="M5 5v6c0 1.66 3.13 3 7 3s7-1.34 7-3V5"/><path d="M5 11v6c0 1.66 3.13 3 7 3s7-1.34 7-3v-6"/></svg></div><h4>Banco de Dados & APIs</h4><div class="tool-tags"><span>SQL</span><span>PL/SQL</span><span>PostgreSQL</span><span>MySQL</span><span>APIs</span></div></div>
-      <div class="tool-card reveal"><div class="tool-icon"><svg viewBox="0 0 24 24"><path d="M12 3l7 3v5c0 5-3.5 8.5-7 10-3.5-1.5-7-5-7-10V6l7-3z"/><path d="M9 12l2 2 4-4"/></svg></div><h4>Segurança & Compliance</h4><div class="tool-tags"><span>LGPD</span><span>Segurança da Informação</span><span>Políticas de Acesso</span><span>Compliance</span><span>Qualidade</span><span>Melhoria Contínua</span></div></div>
-      <div class="tool-card reveal"><div class="tool-icon"><svg viewBox="0 0 24 24"><path d="M4 12a8 8 0 0114-5.3M20 6v5h-5"/><path d="M20 12a8 8 0 01-14 5.3M4 18v-5h5"/></svg></div><h4>CFTV & Controle de Acesso</h4><div class="tool-tags"><span>HikCentral</span><span>CFTV IP</span><span>Eletroímãs</span><span>Sensores</span><span>Controle de Acesso</span><span>Catracas</span></div></div>
+    <div class="section-head reveal">
+      <h2>Competências</h2>
+      <span class="eyebrow">03 — Hard & Soft Skills</span>
+    </div>
+
+    <div class="skills-grid">
+
+      <div class="reveal">
+        <div class="skill-cat">
+          <span class="eyebrow">Gestão & Liderança</span>
+          <ul>
+            <li>Gestão e supervisão de equipes de TI e Telecom</li>
+            <li>Gestão de serviços e operações de TI</li>
+            <li>Planejamento e distribuição de demandas</li>
+            <li>KPIs, SLAs, produtividade e backlog</li>
+            <li>Gestão de fornecedores e contratos</li>
+            <li>Gestão de custos, qualidade e prazos</li>
+            <li>Relacionamento com clientes e áreas de negócio</li>
+            <li>Gestão de incidentes, problemas e prioridades</li>
+          </ul>
+        </div>
+
+        <div class="skill-cat">
+          <span class="eyebrow">Infraestrutura & Telecom</span>
+          <ul>
+            <li>Cabeamento estruturado e redes</li>
+            <li>Fibra óptica e fusão</li>
+            <li>Racks, switches e equipamentos de rede</li>
+            <li>Wi-Fi e infraestrutura de conectividade</li>
+            <li>Servidores e ambiente Windows</li>
+            <li>Active Directory, GPO e DNS</li>
+            <li>Microsoft 365</li>
+            <li>Mikrotik</li>
+            <li>CFTV, controle de acesso, sensores e eletroímãs</li>
+            <li>HikCentral</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="reveal">
+        <div class="skill-cat">
+          <span class="eyebrow">Sistemas & Desenvolvimento</span>
+          <ul>
+            <li>SQL — domínio avançado para análise e desenvolvimento</li>
+            <li>Oracle / PL-SQL</li>
+            <li>PostgreSQL</li>
+            <li>SQL Server / T-SQL</li>
+            <li>APIs de integração</li>
+            <li>JSON / XML e integrações entre sistemas</li>
+            <li>Procedures, views e consultas complexas</li>
+            <li>ERP, WMS, TMS e sistemas de Frente de Loja</li>
+            <li>MV Soul</li>
+            <li>Integrações SAP FI / SAP CO</li>
+          </ul>
+        </div>
+
+        <div class="skill-cat">
+          <span class="eyebrow">Projetos & Produtos</span>
+          <ul>
+            <li>Implantação e go-live de sistemas</li>
+            <li>Levantamento e análise de requisitos</li>
+            <li>Roadmap e gestão de produto</li>
+            <li>Priorização e gestão de backlog</li>
+            <li>Gestão de mudanças</li>
+            <li>Documentação técnica e funcional</li>
+            <li>Interface entre tecnologia e negócio</li>
+          </ul>
+        </div>
+
+        <div class="skill-cat">
+          <span class="eyebrow">Perfil profissional</span>
+          <div class="soft-tags">
+            <span>Liderança</span>
+            <span>Visão sistêmica</span>
+            <span>Comunicação</span>
+            <span>Tomada de decisão</span>
+            <span>Gestão de conflitos</span>
+            <span>Organização</span>
+            <span>Foco em resultados</span>
+            <span>Proximidade com a operação</span>
+            <span>Resolução de problemas</span>
+            <span>Adaptabilidade</span>
+          </div>
+        </div>
+
+        <div class="badges">
+          <div class="badge"><span>ITIL 4 FOUNDATION</span></div>
+          <div class="badge"><span>HDI SUPPORT CENTER</span></div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section id="formacao">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <h2>Formação</h2>
+      <span class="eyebrow">04 — Educação</span>
+    </div>
+
+    <div class="edu-list reveal">
+      <div class="edu-item">
+        <h4>Análise e Desenvolvimento de Sistemas</h4>
+        <p>CONCLUÍDO</p>
+      </div>
+      <div class="edu-item">
+        <h4>MBA em Gestão de Projetos</h4>
+        <p>CONCLUÍDO</p>
+      </div>
+      <div class="edu-item">
+        <h4>Pós-Graduação em Gestão de Logística</h4>
+        <p>CONCLUÍDO</p>
+      </div>
+      <div class="edu-item">
+        <h4>Técnico em Informática</h4>
+        <p>CONCLUÍDO</p>
+      </div>
+      <div class="edu-item">
+        <h4>Técnico em Segurança do Trabalho</h4>
+        <p>FORMAÇÃO TÉCNICA · REGISTRO ATIVO</p>
+      </div>
     </div>
   </div>
 </section>
 
 <section id="contato">
   <div class="wrap">
-    <span class="eyebrow">07 — Contato</span>
-    <h2>Conecte-se.</h2>
+    <span class="eyebrow">05 — Contato</span>
+    <h2>Pronto para assumir novos desafios em TI.</h2>
+
     <div class="contact-grid">
       <div class="contact-list">
-        <a href="#" class="contact-email" data-u="bfaria.dti" data-d="gmail.com">carregando…</a>
-        <a href="#" class="contact-phone" data-n="+5522999540556" data-display="(22) 99954-0556">carregando…</a>
-        <a href="#" class="contact-whatsapp" data-wa="5522999540556" data-msg="Olá Bruno, vi seu portfólio e gostaria de conversar." target="_blank" rel="noopener">Falar no WhatsApp</a>
+        <a href="mailto:bfaria.dti@gmail.com">bfaria.dti@gmail.com</a>
+        <a href="tel:+5522999540556">(22) 99954-0556</a>
         <a href="https://www.linkedin.com/in/brunofariapm/" target="_blank" rel="noopener">linkedin.com/in/brunofariapm</a>
         <div>Campos dos Goytacazes, RJ — Brasil</div>
       </div>
+
       <div class="contact-side">
-        <p>Este é um portfólio profissional mantido para registro de trajetória, especialidades e áreas de domínio. Aberto a conversas sobre projetos, colaborações e troca de conhecimento.</p>
-        <p style="color:var(--leather-soft);font-family:Fraunces,serif;font-style:italic;font-size:1.05rem;margin-top:16px">"Não digo o que se quer ouvir.<br>Aponto o caminho que entrega o resultado."</p>
+        <p>
+          Disponível imediatamente para posições de Gestão de TI, Gestão de Sistemas,
+          Supervisão de TI, Infraestrutura e projetos em qualquer região do Brasil.
+          Atuação presencial, híbrida ou remota.
+        </p>
+        <button class="nav-print-btn" style="border-color:rgba(247,242,234,.4);color:var(--paper)" onclick="printCV()">
+          Imprimir / Baixar PDF
+        </button>
       </div>
     </div>
-    <footer class="footer-bottom">
+
+    <div class="footer-bottom">
       <span>BRUNO FARIA © 2026</span>
-      <span>PORTFÓLIO PROFISSIONAL · TI · INFRAESTRUTURA · SISTEMAS · OPERAÇÕES · SEGURANÇA</span>
-    </footer>
+      <span>GESTÃO DE TI · INFRAESTRUTURA · SISTEMAS · PROJETOS</span>
+    </div>
   </div>
 </section>
 
-<button id="print-fab" onclick="printProfile()" title="Perfil Técnico para PDF">▣ &nbsp; PERFIL TÉCNICO</button>
 
+<!-- VERSÃO ESPECÍFICA PARA IMPRESSÃO / PDF -->
 <div id="print-area">
+
   <div class="cv-header">
     <div>
       <h1>Bruno Faria</h1>
-      <div class="cv-title">Especialista em TI · Infraestrutura · Sistemas · Segurança da Informação · Operações · Logística</div>
+      <div class="cv-title">Gestor de TI · Gestor de Sistemas · Infraestrutura · Projetos</div>
       <div class="cv-contact">
         (22) 99954-0556 · bfaria.dti@gmail.com · linkedin.com/in/brunofariapm<br>
-        Campos dos Goytacazes, RJ · Brasil<br>
-        Portfólio: <a href="https://bfariadti.github.io/portfolio-bruno/" style="color:inherit;text-decoration:underline">bfariadti.github.io/portfolio-bruno</a>
+        Campos dos Goytacazes, RJ · Disponibilidade imediata · Todo o Brasil
       </div>
     </div>
-    <img class="cv-photo" src="https://raw.githubusercontent.com/bfariadti/portfolio-bruno-faria-img/main/portfolio-bruno-faria-img.jpg?v=20260826" alt="Bruno Faria">
+    <img
+      class="cv-photo"
+      src="https://raw.githubusercontent.com/bfariadti/portfolio-bruno-faria-img/main/portfolio-bruno-faria-img.jpg?v=20260826"
+      alt="Bruno Faria"
+    >
   </div>
 
   <h2>Resumo profissional</h2>
-  <p>Profissional com 19 anos de experiência em Tecnologia da Informação, com atuação em gestão de TI, infraestrutura, Telecom, sistemas, projetos, segurança da informação, LGPD e operações. Perfil híbrido entre gestão e operação técnica, com experiência real na liderança e coordenação de equipes, gestão de serviços, KPIs, SLAs, fornecedores, contratos, projetos de implantação e instalação, ambientes críticos e segurança da informação. Forte conhecimento em SQL, Oracle/PL-SQL, PostgreSQL, APIs, sistemas corporativos, redes, cabeamento estruturado, fibra óptica, fusão, racks, infraestrutura Windows, Active Directory, GPO, DNS, Microsoft 365, Mikrotik, CFTV, controle de acesso, HikCentral e integração de sistemas.</p>
+  <p>
+    Profissional com 19 anos de experiência em Tecnologia da Informação, com atuação em gestão
+    de TI, infraestrutura, Telecom, sistemas, projetos e operações. Perfil híbrido entre gestão
+    e operação técnica, com experiência real na liderança e coordenação de equipes, gestão de
+    serviços, KPIs, SLAs, fornecedores, contratos, projetos de implantação e ambientes críticos.
+    Forte conhecimento em SQL, Oracle/PL-SQL, PostgreSQL, APIs, sistemas corporativos, redes,
+    infraestrutura Windows e integração de sistemas.
+  </p>
 
   <h2>Experiência profissional</h2>
-  <div class="entry"><div class="role"><span class="role-name">Unimed Campos — Analista de Sistemas N3</span><span class="role-date">2026 — atual</span></div><div class="sub">Sistema hospitalar MV Soul</div><ul><li>Suporte N3, análise de chamados, relatórios SQL e desenvolvimento/manutenção de formulários e recursos hospitalares.</li></ul></div>
-  <div class="entry"><div class="role"><span class="role-name">Somec Diesel — Analista de Desenvolvimento de Sistemas</span><span class="role-date">2026</span></div><ul><li>Desenvolvimento e suporte de sistemas; administração de servidores, backup, rede cabeada, Wi-Fi e Mikrotik.</li></ul></div>
-  <div class="entry"><div class="role"><span class="role-name">Minsait — Gestor de Serviços / Gestor de Qualidade / Preposto Regional</span><span class="role-date">2025</span></div><div class="sub">Field Service Petrobras · Bacia de Campos e Espírito Santo</div><ul><li>Gestão de mais de 20 profissionais de TI e Telecom e interface com supervisores e equipes de campo.</li><li>Responsabilidade por KPIs, SLAs, produtividade, backlog, escalas, clientes, fornecedores, contratos, custos, multas, relatórios e planejamento.</li><li>Gestão macro de demandas de cabeamento estruturado, pontos de rede, fibra óptica, fusão, equipamentos de rede, racks e Wi-Fi.</li></ul></div>
-  <div class="entry"><div class="role"><span class="role-name">Aliseo S.A. — Supervisor de TI</span><span class="role-date">2023 — 2024</span></div><ul><li>Supervisão de equipe de TI e Telecom; infraestrutura, projetos de instalação, redes, fibra, racks, servidores, Mikrotik e Wi-Fi.</li><li>Coordenação de CFTV, controle de acesso, sensores, eletroímãs e HikCentral.</li><li>Responsabilidade por Segurança da Informação e LGPD: políticas, controles de acesso, permissões, documentação, conscientização, implantação e acompanhamento.</li><li>Administração de ambiente Windows, Active Directory, GPO, DNS, Microsoft 365.</li><li>Implantação e acompanhamento do ERP Sankhya.</li></ul></div>
-  <div class="entry"><div class="role"><span class="role-name">BBM Logística — Consultor de Desenvolvimento de Integrações PJ</span><span class="role-date">2022 — 2023</span></div><ul><li>Desenvolvimento de integrações TMS com SQL, PostgreSQL, Oracle/PLSQL, APIs e SAP FI/CO.</li></ul></div>
-  <div class="entry"><div class="role"><span class="role-name">NovoVarejo — Product Manager</span><span class="role-date">2021 — 2023</span></div><ul><li>Gestão funcional do produto, roadmap, backlog, onboarding e integração com DMS e marketplaces.</li><li>Produto capaz de gerar milhares de anúncios automaticamente a partir do estoque de peças de concessionárias.</li></ul></div>
-  <div class="entry"><div class="role"><span class="role-name">Barcelos &amp; Cia — Analista de Negócios e Sistemas</span><span class="role-date">2007 — 2021</span></div><ul><li>Responsável pelo sistema de Frente de Loja de aproximadamente 15 supermercados e cerca de 60 PDVs, além de restaurantes e operações de atacado.</li><li>Projetos de Frente de Loja, WMS, comando de voz, SOMA/NovoVarejo, autoatendimento, comandas eletrônicas e integrações.</li><li>Projetos de instalação e implantação de infraestrutura de novas lojas: servidores, concentradores, checkout, periféricos, rede, balanças, check-prices.</li><li>Responsável pelo WMS e participação direta na operação logística do centro de distribuição.</li></ul></div>
 
-  <div class="tail-block">
-    <h2>Formação</h2>
-    <div class="cols">
-      <div><div class="skill">Análise e Desenvolvimento de Sistemas</div><div class="skill">MBA em Gestão de Projetos</div><div class="skill">Pós-Graduação em Gestão de Logística</div></div>
-      <div><div class="skill">Técnico em Informática</div><div class="skill">Técnico em Segurança do Trabalho — registro ativo</div><div class="skill">ITIL 4 Foundation · HDI Support Center</div></div>
+  <div class="role">Gran Services S.A. — Analista de Sistemas Sênior <span>out. 2026 — atual</span></div>
+  <ul>
+    <li>Sustentação N3 e resolução de incidentes críticos; apoio à migração de sistemas legados (SGP) para a plataforma MIO.</li>
+    <li>Integrações via APIs e consultas em SQL Server e Oracle, com foco em consistência e performance dos dados.</li>
+    <li>Levantamento de requisitos e especificações funcionais/técnicas, atuando na interface entre negócio, TI e usuários-chave.</li>
+  </ul>
+
+  <div class="role">Unimed Campos — Analista de Sistemas <span>mai. — out. 2026</span></div>
+  <div class="sub">Sistema hospitalar MV Soul / MV PEP</div>
+  <ul>
+    <li>Suporte N3, relatórios Report SQL, formulários MV PEP e sustentação dos processos assistenciais e administrativos.</li>
+  </ul>
+
+  <div class="role">Somec Diesel — Analista de Desenvolvimento de Sistemas <span>2026</span></div>
+  <ul>
+    <li>Desenvolvimento e suporte de sistemas; administração de servidores, backup, rede cabeada, Wi-Fi e Mikrotik.</li>
+  </ul>
+
+  <div class="role">Minsait — Gestor de Serviços / Gestor de Qualidade / Preposto Regional <span>2025</span></div>
+  <div class="sub">Field Service Petrobras · Bacia de Campos e Espírito Santo</div>
+  <ul>
+    <li>Gestão de mais de 20 profissionais de TI e Telecom e interface com supervisores e equipes de campo.</li>
+    <li>Responsabilidade por KPIs, SLAs, produtividade, backlog, escalas, clientes, fornecedores, contratos, custos, multas, relatórios e planejamento.</li>
+    <li>Gestão macro de demandas de cabeamento, pontos de rede, fibra óptica, fusão, equipamentos, racks e Wi-Fi.</li>
+  </ul>
+
+  <div class="role">Aliseo S.A. — Supervisor de TI <span>2023 — 2024</span></div>
+  <ul>
+    <li>Supervisão de equipe de TI e Telecom; infraestrutura, redes, fibra, racks, servidores, Mikrotik e Wi-Fi.</li>
+    <li>Coordenação de CFTV, controle de acesso, sensores, eletroímãs e HikCentral.</li>
+    <li>Responsabilidade por Segurança da Informação, LGPD, Active Directory, GPO, DNS e Microsoft 365.</li>
+    <li>Implantação e acompanhamento do ERP Sankhya.</li>
+  </ul>
+
+  <div class="role">BBM Logística — Consultor de Desenvolvimento de Integrações PJ <span>2022 — 2023</span></div>
+  <ul>
+    <li>Desenvolvimento de integrações TMS com SQL, PostgreSQL, Oracle/PLSQL, APIs e SAP FI/CO.</li>
+  </ul>
+
+  <div class="role">NovoVarejo — Product Manager <span>2021 — 2023</span></div>
+  <ul>
+    <li>Gestão funcional do produto, roadmap, backlog, onboarding e integração com DMS e marketplaces.</li>
+    <li>Produto capaz de gerar milhares de anúncios automaticamente a partir do estoque de peças de concessionárias.</li>
+  </ul>
+
+  <div class="role">Barcelos & Cia — Analista de Negócios e Sistemas <span>2007 — 2021</span></div>
+  <ul>
+    <li>Responsável pelo sistema de Frente de Loja de aproximadamente 15 supermercados e cerca de 60 PDVs, além de restaurantes e operações de atacado.</li>
+    <li>Projetos de Frente de Loja, WMS, comando de voz, SOMA/NovoVarejo, autoatendimento, comandas eletrônicas e integrações.</li>
+    <li>Responsável pelo WMS e participação direta na operação logística do centro de distribuição.</li>
+  </ul>
+
+  <h2>Formação</h2>
+  <div class="cols">
+    <div>
+      <div class="skill">Análise e Desenvolvimento de Sistemas</div>
+      <div class="skill">MBA em Gestão de Projetos</div>
+      <div class="skill">Pós-Graduação em Gestão de Logística</div>
     </div>
-    <h2>Competências principais</h2>
-    <div class="cols">
-      <div><div class="skill">Gestão de TI e equipes · KPIs · SLAs · Backlog</div><div class="skill">Infraestrutura · Redes · Telecom · Fibra óptica · Fusão</div><div class="skill">Cabeamento estruturado · Racks · Switches · Wi-Fi</div><div class="skill">Windows Server · Active Directory · GPO · DNS</div><div class="skill">Mikrotik · CFTV · HikCentral · Controle de Acesso</div><div class="skill">Gestão de Projetos · Implantação · Instalação · Go-live</div></div>
-      <div><div class="skill">Segurança da Informação · LGPD · Políticas · Controles</div><div class="skill">SQL · T-SQL · Oracle/PL-SQL · PostgreSQL</div><div class="skill">APIs · JSON/XML · Integrações</div><div class="skill">ERP · WMS · TMS · PDV · MV Soul</div><div class="skill">SAP FI/CO · Gestão de fornecedores</div><div class="skill">Liderança · Visão sistêmica · Resolução de problemas</div></div>
+    <div>
+      <div class="skill">Técnico em Informática</div>
+      <div class="skill">Técnico em Segurança do Trabalho — registro ativo</div>
+      <div class="skill">ITIL 4 Foundation · HDI Support Center</div>
     </div>
-    <div class="footer-cv">Bruno Faria · Presencial, híbrido ou remoto · Todo o Brasil</div>
   </div>
+
+  <h2>Competências principais</h2>
+  <div class="cols">
+    <div>
+      <div class="skill">Gestão de TI e equipes · KPIs · SLAs · Backlog</div>
+      <div class="skill">Infraestrutura · Redes · Telecom · Fibra óptica</div>
+      <div class="skill">Windows Server · Active Directory · GPO · DNS</div>
+      <div class="skill">Mikrotik · Wi-Fi · CFTV · HikCentral</div>
+      <div class="skill">Gestão de Projetos · Implantação · Go-live</div>
+    </div>
+    <div>
+      <div class="skill">SQL · T-SQL · Oracle/PL-SQL · PostgreSQL</div>
+      <div class="skill">APIs · JSON/XML · Integrações</div>
+      <div class="skill">ERP · WMS · TMS · PDV · MV Soul</div>
+      <div class="skill">SAP FI/CO · Gestão de fornecedores</div>
+      <div class="skill">Liderança · Visão sistêmica · Resolução de problemas</div>
+    </div>
+  </div>
+
+  <div class="footer-cv">
+    Bruno Faria · Disponibilidade imediata · Presencial, híbrido ou remoto · Todo o Brasil
+  </div>
+
 </div>
 
 <script>
-function printProfile(){
-  try{ if(document.fonts && document.fonts.ready) document.fonts.ready.then(function(){window.print()}); else window.print(); }
-  catch(e){ window.print(); }
+function printCV(){
+  window.print();
 }
+
+// Evita reutilizar cópias antigas das imagens hospedadas no GitHub.
+// O HTML também solicita revalidação por meio das diretivas no <head>.
+document.querySelectorAll('img[src*="raw.githubusercontent.com"]').forEach(img=>{
+  const url = new URL(img.src);
+  url.searchParams.set("cache_bust", Date.now().toString());
+  img.src = url.toString();
+});
 
 const nav=document.getElementById("nav");
 window.addEventListener("scroll",()=>{
@@ -541,24 +919,20 @@ window.addEventListener("scroll",()=>{
 
 const revealEls=document.querySelectorAll(".reveal");
 const reduced=window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-if(reduced){ revealEls.forEach(el=>el.classList.add("in")); }
-else{
+
+if(reduced){
+  revealEls.forEach(el=>el.classList.add("in"));
+}else{
   const io=new IntersectionObserver(entries=>{
-    entries.forEach(entry=>{ if(entry.isIntersecting){ entry.target.classList.add("in"); io.unobserve(entry.target); } });
+    entries.forEach(entry=>{
+      if(entry.isIntersecting){
+        entry.target.classList.add("in");
+        io.unobserve(entry.target);
+      }
+    });
   },{threshold:.1});
   revealEls.forEach(el=>io.observe(el));
 }
-
-document.querySelectorAll(".contact-email").forEach(el=>{
-  const endereco=el.dataset.u+"@"+el.dataset.d; el.href="mailto:"+endereco; el.textContent=endereco;
-});
-document.querySelectorAll(".contact-phone").forEach(el=>{
-  el.href="tel:"+el.dataset.n; el.textContent=el.dataset.display;
-});
-document.querySelectorAll(".contact-whatsapp").forEach(el=>{
-  const numero=el.dataset.wa; const msg=encodeURIComponent(el.dataset.msg||"");
-  el.href="https://wa.me/"+numero+(msg?("?text="+msg):"");
-});
 </script>
 
 </body>
